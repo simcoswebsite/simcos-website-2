@@ -26,6 +26,7 @@ const ProductCard: React.FC<ProductCard> = ({
     router.push(`/product/${data?.id}`);
   };
 
+  // stops the onClick on the product card's parent div from triggering
   const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
 
