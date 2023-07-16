@@ -8,6 +8,7 @@ import useCart from '@/hooks/useCart';
 import Summary from './components/Summary'
 import CartItem from './components/CartItem';
 
+//stops caching
 export const revalidate = 0;
 
 const CartPage = () => {
