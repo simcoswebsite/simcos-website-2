@@ -33,7 +33,6 @@ const Summary = () => {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
       productIds: items.map((item) => item.id)
     });
-    console.log(response)
 
     window.location = response.data.url;
   }
