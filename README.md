@@ -1,4 +1,4 @@
-# Full Stack E-Commerce + Dashboard & CMS: 
+# Full Stack E-Commerce Store (Trillion Troves) 
 
 For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
 
