@@ -10,8 +10,8 @@ import ModalProvider from '@/providers/ModalProvider'
 const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Store Front Website',
-  description: 'An online store where customers can purchase goods.',
+  title: 'Simcos',
+  description: 'A local restaurant dedicated to quality serice',
 }
 
 export default function RootLayout({
@@ -21,12 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={`${font.className} bg-custom-gradient min-h-screen`}>
         <ToastProvider />
         <ModalProvider />
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )

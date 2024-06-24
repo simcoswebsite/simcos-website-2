@@ -54,11 +54,11 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
                 name="Sizes" 
                 data={sizes}
               />
-              <Filter 
+              {/* <Filter 
                 valueKey="colorId" 
                 name="Colors" 
                 data={colors}
-              />
+              /> */}
             </div>
           </Dialog.Panel>
         </div>
