@@ -9,7 +9,7 @@ import Summary from './components/Summary'
 import CartItem from './components/CartItem';
 
 //stops caching
-export const revalidate = 0;
+// export const revalidate = 0;
 
 const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);
