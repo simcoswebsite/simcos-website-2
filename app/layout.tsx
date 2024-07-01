@@ -24,7 +24,6 @@ export default function RootLayout({
       <body className={`${font.className} bg-custom-gradient min-h-screen`}>
         <ToastProvider />
         <ModalProvider />
-        <Navbar />
         {children}
         {/* <Footer /> */}
       </body>

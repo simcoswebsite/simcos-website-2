@@ -8,6 +8,7 @@ import Image from "next/image";
 import { HotDog } from "./components/hotdog";
 import { bevan, robotoCondensed } from "@/fonts";
 import { SimcosButton } from "@/components/ui/SimcosButton";
+import Navbar  from "@/components/Navbar"
 
 export const revalidate = 0;
 
@@ -18,40 +19,46 @@ const HomePage = async () => {
 
   return (
     <Container>
-      <div className="flex py-24 min-h-full max-h-full min-w-full flex-grow flex-col md:flex-row">
-        <div className="flex flex-col items-stretch basis-1/2 max-h-full max-w-full relative">
-          <div className="relative flex flex-col items-center justify-center min-h-full max-h-full">
-            <div className="h-full w-full relative basis-1/2">
-              <Image
-                alt="An image of Simco's logo"
-                src="/simcos-logo.png"
-                fill
-                priority={true}
-                style={{objectFit:"contain"}}
-              />
+      <div className="flex flex-col max-w-full">
+      <Navbar />
+        <div className="flex py-24 min-h-screen max-h-full min-w-full flex-col md:flex-row">
+          <div className="flex flex-col items-stretch basis-1/2 max-h-full max-w-full relative">
+            <div className="relative flex flex-col items-center justify-center min-h-full max-h-full">
+              <div className="min-h-min min-w-min max-h-full max-w-full relative basis-1/2 items-center justify-center">
+                <Image
+                  alt="An image of Simco's logo"
+                  src="/simcos-logo.png"
+                  height={300}
+                  width={300}
+                  priority={true}
+                  style={{objectFit:"cover"}}
+                />
               </div>
-            <div className="flex flex-col items-center relative px-20 text-center basis-1/2">
-              <h1 className={`text-white text-3xl m-8 mb-4 ${bevan.className}`}>
-                HUNGRY?
-              </h1>
-              <p className={`text-white text-xl ${robotoCondensed.className}`}>
-                {`Welcome to Simco’s`}
-              </p>
-              <p className={`text-white text-xl ${robotoCondensed.className}`}>
-                {`Welcome to Simco’s Home of the Worlds Largest Old Tyme Franks Serving iconic food & drink for lunch, dinner, and late-night cravings to the Boston area since 1935.`}
-              </p>
-              <SimcosButton
-                variant={"simcos"}
-                size={'nav'}
-                className={bevan.className}
-              >
-                MENU
-              </SimcosButton>
+              <div className="flex flex-col items-center relative px-20 text-center basis-1/2">
+                <h1 className={`text-white text-3xl m-8 mb-4 ${bevan.className}`}>
+                  HUNGRY?
+                </h1>
+                <p className={`text-white text-xl ${robotoCondensed.className}`}>
+                  {`Welcome to Simco’s`}
+                </p>
+                <p className={`text-white text-xl ${robotoCondensed.className}`}>
+                  {`Welcome to Simco’s Home of the Worlds Largest Old Tyme Franks Serving iconic food & drink for lunch, dinner, and late-night cravings to the Boston area since 1935.`}
+                </p>
+                <SimcosButton
+                  variant={"simcos"}
+                  size={'nav'}
+                  className={bevan.className}
+                >
+                  MENU
+                </SimcosButton>
+              </div>
             </div>
+            {/* <ProductList title="" items={products} /> */}
           </div>
-          {/* <ProductList title="" items={products} /> */}
+          <div className="basis-1/2 min-h-min min-w-min max-h-full max-w-full relative">
+            <HotDog />
+          </div>
         </div>
-        {/* <HotDog /> */}
       </div>
     </Container>
   )

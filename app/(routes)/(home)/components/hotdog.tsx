@@ -5,13 +5,18 @@ export const HotDog = () => {
     <div className="
       bg-white
       basis-1/2
-      rounded-l-2xl
+      rounded-2xl
       flex
       items-center
       justify-center
       relative
+      h-96
       min-h-full
       min-w-full
+      max-h-full
+      max-w-full
+      border-2
+      border-s-blue-500
     ">
       <Image
         src="/hot-dog-with-fries.jpg"
@@ -19,11 +24,8 @@ export const HotDog = () => {
         alt="Picture of a hot dog with a side of fries" 
         style={{
           objectFit: "cover",
-          borderTopLeftRadius: "2rem",
-          borderBottomLeftRadius: "2rem",
-          paddingLeft:"1rem",
-          paddingTop:"1rem",
-          paddingBottom:"1rem"
+          borderRadius: "2rem",
+          padding: "1rem"
         }}
       />
     </div>
