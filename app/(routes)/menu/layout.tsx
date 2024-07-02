@@ -1,6 +1,6 @@
 import Header from "@/components/Header"
 
-const AuthLayout = ({children} :{ children: React.ReactNode}) =>{
+const MenuLayout = ({children} :{ children: React.ReactNode}) =>{
   return (
     <div className="
       flex 
@@ -15,4 +15,4 @@ const AuthLayout = ({children} :{ children: React.ReactNode}) =>{
   )
 }
 
-export default AuthLayout
+export default MenuLayout

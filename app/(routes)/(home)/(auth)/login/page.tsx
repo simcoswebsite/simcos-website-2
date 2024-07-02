@@ -53,7 +53,7 @@ export default function LogInPage() {
         {/* <p className={`text-[16px] text-[#EF370D] underline ${robotoBold.className}`}>Sign In</p> */}
       </div>
      <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 border-yellow-500 border-solid border-1">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="email"

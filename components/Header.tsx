@@ -8,7 +8,7 @@ const Header = () => {
       flex 
       items-center 
       relative 
-      min-h-[20vh] 
+      min-h-min 
       justify-center 
       w-full 
       bg-white
@@ -17,15 +17,16 @@ const Header = () => {
       border-b-2
       ">
       <Link href="/">
-      <div className="relative h-full w-full">
+      <div className="relative h-full w-full py-2">
         <Image
           alt="An image of Simco's logo"
           src="/simcos-logo.png"
           height={200}
           width={200}
-          // style={{
-          //   position: 'absolute'
-          // }}
+          style={{
+            // position: 'absolute',
+            objectFit: 'cover'
+          }}
         />
       </div>
       </Link>
