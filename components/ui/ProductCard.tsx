@@ -12,7 +12,7 @@ import useCart from "@/hooks/useCart";
 import { Product } from "@/types";
 
 interface ProductCard {
-  data: Product
+  data: Product | any
 }
 
 const ProductCard: React.FC<ProductCard> = ({

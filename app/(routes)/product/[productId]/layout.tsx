@@ -1,6 +1,6 @@
 import Header from "@/components/Header"
 
-const MenuLayout = ({children} :{ children: React.ReactNode}) =>{
+const ProductLayout = ({children} :{ children: React.ReactNode}) =>{
   return (
     <div className="
       flex 
@@ -15,4 +15,4 @@ const MenuLayout = ({children} :{ children: React.ReactNode}) =>{
   )
 }
 
-export default MenuLayout
+export default ProductLayout
