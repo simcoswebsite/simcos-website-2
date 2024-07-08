@@ -5,6 +5,8 @@ import { SimcosButton } from "@/components/ui/SimcosButton"
 import ProductCard from '@/components/ui/ProductCard';
 import NoResults from '@/components/ui/NoResults';
 
+import { useEffect, useState } from 'react'
+
 export default function MenuPage(){
   const products = [
     {
@@ -185,8 +187,32 @@ export default function MenuPage(){
     }
   ]
 
+  const [error, setError] = useState(null);
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await fetch('/api/items');
+        console.log(response)
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+        const data = await response.json();
+        setItems(data.objects);
+      } catch (error) {
+        console.log(error)
+      } 
+    };
+
+    fetchItems();
+  }, []);
+
+  console.log(items)
+
   return(
-    <div className='w-full h-full bg-white px-8 flex flex-col'>
+    <div className='w-full h-full bg-white px-8 md:px-40 lg:px-40 flex flex-col'>
       <h1 className={`text-[30px] py-2 ${robotoCondensed.className}`}>MENU</h1>
       <SearchBar className={`${roboto.className}`} placeholder="〇 Search"/>
       <div className="flex py-8 justify-evenly">
@@ -227,14 +253,19 @@ export default function MenuPage(){
         </div>
       </div>
       <h1 className={`text-[18px] py-4 ${robotoCondensed.className}`}>POPULAR</h1>
-      <div className="mt-6 lg:col-span-4 lg:mt-0">
+      <div>
+        {items.map((item) =>(
+          <p>{item.categoryData.name}</p>
+        ))}
+      </div>
+      {/* <div className="mt-6 lg:col-span-4 lg:mt-0">
               {products.length === 0 && <NoResults />}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {products.map((item) => (
                   <ProductCard key={item.id} data={item} />
                 ))}
               </div>
-      </div>
+      </div> */}
       {/* <div className="grid grid-cols-2">
         <div className="flex flex-col items-center justify-center">
           <SimcosButton variant={"filter"} size={"tile"}>

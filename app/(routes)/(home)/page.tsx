@@ -9,6 +9,7 @@ import { HotDog } from "./components/hotdog";
 import { bevan, robotoCondensed } from "@/fonts";
 import { SimcosButton } from "@/components/ui/SimcosButton";
 import Navbar  from "@/components/Navbar"
+import Link from "next/link";
 
 export const revalidate = 0;
 
@@ -44,13 +45,35 @@ const HomePage = async () => {
                 <p className={`text-white text-xl ${robotoCondensed.className}`}>
                   {`Welcome to Simco’s Home of the Worlds Largest Old Tyme Franks Serving iconic food & drink for lunch, dinner, and late-night cravings to the Boston area since 1935.`}
                 </p>
-                <SimcosButton
-                  variant={"simcos"}
-                  size={'nav'}
-                  className={bevan.className}
-                >
-                  MENU
-                </SimcosButton>
+                <div className="flex sm:flex-row">
+                  <Link href="/menu">
+                    <SimcosButton
+                      variant={"simcos"}
+                      size={'nav'}
+                      className={bevan.className}
+                    >
+                      MENU
+                    </SimcosButton>
+                  </Link>
+                  <Link href="/menu">
+                    <SimcosButton
+                      variant={"simcos"}
+                      size={'nav'}
+                      className={bevan.className}
+                    >
+                      PICKUP
+                    </SimcosButton>
+                  </Link>
+                  <Link href="/menu">
+                    <SimcosButton
+                      variant={"simcos"}
+                      size={'nav'}
+                      className={bevan.className}
+                    >
+                      DELIVERY
+                    </SimcosButton>
+                  </Link>
+                </div>
               </div>
             </div>
             {/* <ProductList title="" items={products} /> */}
