@@ -188,8 +188,28 @@ export default function MenuPage(){
   ]
 
   const [error, setError] = useState(null);
+  const [categories, setCategories] = useState([]);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch('/api/categories');
+        console.log(response)
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+        const data = await response.json();
+        console.log(data)
+        setCategories(data);
+      } catch (error) {
+        console.log(error)
+      } 
+    };
+
+    fetchCategories();
+  }, []);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -209,7 +229,7 @@ export default function MenuPage(){
     fetchItems();
   }, []);
 
-  console.log(items)
+  console.log("here", categories)
 
   return(
     <div className='w-full h-full bg-white px-8 md:px-40 lg:px-40 flex flex-col'>
@@ -254,9 +274,12 @@ export default function MenuPage(){
       </div>
       <h1 className={`text-[18px] py-4 ${robotoCondensed.className}`}>POPULAR</h1>
       <div>
-        {items.map((item) =>(
-          <p>{item.categoryData.name}</p>
-        ))}
+        {/* {categories.map((category) =>(
+          <p>{category.categoryData.name}</p>
+        ))} */}
+        {/* {items.map((item) =>(
+          <p>{item.itemData}</p>
+        ))} */}
       </div>
       {/* <div className="mt-6 lg:col-span-4 lg:mt-0">
               {products.length === 0 && <NoResults />}
