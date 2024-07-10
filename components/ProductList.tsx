@@ -1,6 +1,7 @@
 import ProductCard from "@/components/ui/ProductCard";
 import { Product } from "@/types";
 import NoResults from "@/components/ui/NoResults";
+import { robotoCondensed, roboto } from "@/fonts"
 
 interface ProductListProps {
   title: string;
@@ -13,7 +14,7 @@ const ProductList: React.FC<ProductListProps> = ({
 }) => {
   return (
     <div className="space-y-4">
-      <h3 className="font-bold text-3xl">{title}</h3>
+      <h1 className={`text-[18px] py-4 ${robotoCondensed.className}`}>{title}</h1>
       {items.length === 0 && <NoResults />}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {items.map((item) => (

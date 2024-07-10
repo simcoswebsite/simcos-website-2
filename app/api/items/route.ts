@@ -4,7 +4,7 @@ import { catalogApi } from '@/lib/square';
 (BigInt.prototype as any).toJSON = function() { return this.toString(); }
 
 export async function GET() {
-  const ACCESS_TOKEN = process.env.SANDBOX_ACCESS_TOKEN;
+  const ACCESS_TOKEN = process.env.SQUARE_ACCESS_TOKEN;
 
   // try {
   //   const response = await catalogApi.listCatalog();

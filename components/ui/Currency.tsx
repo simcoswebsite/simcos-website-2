@@ -24,9 +24,12 @@ const Currency: React.FC<CurrencyProps> = ({
     return null;
   }
 
+  // Convert the value from cents to dollars
+  const dollarValue = Number(value) / 100;
+
   return ( 
     <div className="font-semibold">
-      {formatter.format(Number(value))}
+      {formatter.format(dollarValue)}
     </div>
   );
 }

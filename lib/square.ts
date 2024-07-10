@@ -2,7 +2,7 @@ import { Client, Environment } from 'square';
 
 const client = new Client({
   environment: Environment.Production,
-  accessToken: process.env.SANDBOX_ACCESS_TOKEN,
+  accessToken: process.env.SQUARE_ACCESS_TOKEN,
 });
 
 export const catalogApi = client.catalogApi;

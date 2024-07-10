@@ -8,6 +8,7 @@ import Button from "@/components/ui/Button";
 import Currency from "@/components/ui/Currency";
 import useCart from "@/hooks/useCart";
 import { toast } from "react-hot-toast";
+import Link from "next/link";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -29,13 +30,14 @@ const Summary = () => {
     return total + Number(item.price)
   }, 0);
 
-  const onCheckout = async () => {
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: items.map((item) => item.id)
-    });
+  // Stripe Implementation
+  // const onCheckout = async () => {
+  //   const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
+  //     productIds: items.map((item) => item.id)
+  //   });
 
-    window.location = response.data.url;
-  }
+  //   window.location = response.data.url;
+  // }
 
   return ( 
     <div
@@ -50,9 +52,11 @@ const Summary = () => {
          <Currency value={totalPrice} />
         </div>
       </div>
-      <Button onClick={onCheckout} disabled={true} className="w-full mt-6">
-        Checkout
-      </Button>
+      <Link href="/checkout">
+        <Button disabled={items.length === 0} className="w-full mt-6">
+          Checkout
+        </Button>
+      </Link>
     </div>
   );
 }

@@ -33,23 +33,29 @@ const ProductCard: React.FC<ProductCard> = ({
   };
   
   // stops the onClick on the product card's parent div from triggering
-  const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const onPreview: MouseEventHandler<HTMLDivElement> = (event) => {
     event.stopPropagation();
 
     previewModal.onOpen(data);
   };
   
   return ( 
-    <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
-      {/* Image & Actions */}
-      <div className="aspect-square rounded-xl bg-gray-100 relative">
-        {/* <Image 
+    <div onClick={onPreview} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
+      {/* Image */}
+      {/* <div className="aspect-square rounded-xl bg-gray-100 relative">
+        <Image 
           src={data.images?.[0]?.url} 
           alt="" 
           fill
           className="aspect-square object-cover rounded-md"
-        /> */}
-        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+        />
+      </div> */}
+      {/* Description */}
+      <div>
+        <p className="font-semibold text-lg">{data.name}</p>
+        <p className="text-sm text-gray-500">{data.category?.name}</p>
+        {/* Actions */}
+        {/* <div className="opacity-0 group-hover:opacity-100 transition relative w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <IconButton 
               onClick={onPreview} 
@@ -60,12 +66,7 @@ const ProductCard: React.FC<ProductCard> = ({
               icon={<ShoppingCart size={20} className="text-gray-600" />} 
             />
           </div>
-        </div>
-      </div>
-      {/* Description */}
-      <div>
-        <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-sm text-gray-500">{data.category?.name}</p>
+        </div> */}
       </div>
       {/* Price & Review */}
       <div className="flex items-center justify-between">

@@ -1,12 +1,10 @@
 export interface Product {
   id: string;
-  category: Category;
+  category: string;
   name: string;
+  isDeleted: boolean;
+  itemData: Object
   price: string;
-  isFeatured: boolean;
-  size: Size;
-  color: Color;
-  images: Image[]
 };
 
 export interface Image {
