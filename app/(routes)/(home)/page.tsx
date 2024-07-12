@@ -46,7 +46,7 @@ const HomePage = async () => {
                   {`Welcome to Simco’s Home of the Worlds Largest Old Tyme Franks Serving iconic food & drink for lunch, dinner, and late-night cravings to the Boston area since 1935.`}
                 </p>
                 <div className="flex sm:flex-row">
-                  <Link href="/menu">
+                  {/* <Link href="/menu">
                     <SimcosButton
                       variant={"simcos"}
                       size={'nav'}
@@ -54,7 +54,7 @@ const HomePage = async () => {
                     >
                       MENU
                     </SimcosButton>
-                  </Link>
+                  </Link> */}
                   <Link href="/menu">
                     <SimcosButton
                       variant={"simcos"}
