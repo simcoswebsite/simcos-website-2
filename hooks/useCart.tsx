@@ -15,12 +15,15 @@ const useCart = create(
   persist<CartStore>((set, get) => ({
   items: [],
   addItem: (data: Product) => {
+    //TODO:Add a loop to count for the quantity of the item
+    //check the quantity first on the type:Product object, then add the item x times
     const currentItems = get().items;
     const existingItem = currentItems.find((item) => item.id === data.id);
     
-    if (existingItem) {
-      return toast('Item already in cart.');
-    }
+    //TODO: Add this back ASAP once finished with add-ons
+    // if (existingItem) {
+    //   return toast('Item already in cart.');
+    // }
 
     set({ items: [...get().items, data] });
     toast.success('Item added to cart.');

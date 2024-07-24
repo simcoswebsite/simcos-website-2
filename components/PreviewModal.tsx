@@ -4,7 +4,7 @@ import usePreviewModal from "@/hooks/usePreviewModal";
 import Gallery from "@/components/gallery";
 import Info from "@/components/Info";
 import Modal from "@/components/ui/Modal";
-
+import PreviewImage from "@/components/PreviewImage";
 
 const PreviewModal = () => {
   const previewModal = usePreviewModal();
@@ -23,6 +23,7 @@ const PreviewModal = () => {
         {/* <div className="sm:col-span-4 lg:col-span-5">
           <Gallery images={product.images} />
         </div> */}
+        <PreviewImage />
         <div className="sm:col-span-8 lg:col-span-7">
           <Info data={product} />
         </div>

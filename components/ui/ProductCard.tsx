@@ -42,14 +42,14 @@ const ProductCard: React.FC<ProductCard> = ({
   return ( 
     <div onClick={onPreview} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
       {/* Image */}
-      {/* <div className="aspect-square rounded-xl bg-gray-100 relative">
+      <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image 
-          src={data.images?.[0]?.url} 
+          src="/sample-picture.jpg"
           alt="" 
           fill
           className="aspect-square object-cover rounded-md"
         />
-      </div> */}
+      </div>
       {/* Description */}
       <div>
         <p className="font-semibold text-lg">{data.name}</p>
