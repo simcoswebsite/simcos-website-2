@@ -29,6 +29,20 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     // You can also handle additional logic here, like updating the cart
   }
 
+  const addOns = []
+  const sizes = []
+  
+  for (const item of data.modifiers){
+    addOns.push(
+      <div>
+        <h3>{item.modifierListData.name}</h3>
+      </div>)
+  }
+
+  for (const item of data.itemData.variations){
+    sizes.push(<p>{item.itemVariationData.name}:<Currency value={item.itemVariationData.priceMoney.amount}/></p>)
+  }
+
   return ( 
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
@@ -42,10 +56,12 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <div className="flex items-center gap-x-4">
           <h3 className="font-semibold text-black">Size:</h3>
           <div>
+            {sizes}
             {/* {data?.size?.value} */}
           </div>
           <h3 className="font-semibold text-black">Extras:</h3>
           <div>
+            {addOns}
             {/* {data?.size?.value} */}
           </div>
         </div>

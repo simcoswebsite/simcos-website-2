@@ -53,7 +53,7 @@ const ProductCard: React.FC<ProductCard> = ({
       {/* Description */}
       <div>
         <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-sm text-gray-500">{data.category?.name}</p>
+        {/* <p className="text-sm text-gray-500">{data.category}</p> */}
         {/* Actions */}
         {/* <div className="opacity-0 group-hover:opacity-100 transition relative w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">

@@ -1,3 +1,5 @@
+import { ItemVariationLocationOverrides } from "square";
+
 export interface Product {
   id: string;
   category: string;
@@ -5,6 +7,8 @@ export interface Product {
   isDeleted: boolean;
   itemData: Object
   price: string;
+  modifiers: Array<Object>;
+  sizeOptions: Array<Object>
 };
 
 export interface Image {

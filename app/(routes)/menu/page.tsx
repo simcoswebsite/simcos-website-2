@@ -47,7 +47,9 @@ export default function MenuPage(){
         name: item.name,
         isDeleted: item.isDeleted,
         itemData: item.itemData,
-        price:item.itemData.variations[0].itemVariationData.priceMoney.amount
+        price:item.itemData.variations[0].itemVariationData.priceMoney.amount,
+        modifiers: item.itemData.modifiers.filter((modifier) => modifier.type == 'MODIFIER_LIST'),
+        sizeOptions: item.itemData.variations
       }
       // return <ProductCard key={index} data={item}/>
       return product
