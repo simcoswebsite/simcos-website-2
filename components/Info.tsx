@@ -154,10 +154,23 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="mt-5 flex flex-col gap-x-3">
-            <Label className="font-semibold text-base text-black" htmlFor="instructions">Special Instructions:</Label> 
-            <Textarea className="border-black" placeholder="Add any requests here." id="instructions"/>
-          </div>
+          <FormField
+            control={form.control}
+            name="instructions"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="font-semibold text-base text-black">Special Instructions</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="Add any requests here."
+                    className="border-black"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <div className="mt-5 flex items-center gap-x-3">
           <QuantitySelector initialQuantity={quantity} onChange={handleQuantityChange} />
             <Button type="submit" className="flex items-center gap-x-2">
