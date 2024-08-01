@@ -25,7 +25,7 @@ const HomePage = async () => {
         <div className="flex py-24 min-h-screen max-h-full min-w-full flex-col md:flex-row">
           <div className="flex flex-col items-stretch basis-1/2 max-h-full max-w-full relative">
             <div className="relative flex flex-col items-center justify-center min-h-full max-h-full">
-              <div className="min-h-min min-w-min max-h-full max-w-full relative basis-1/2 items-center justify-center">
+              <div className="flex min-h-min min-w-min max-h-full max-w-full relative basis-1/2 items-center justify-center">
                 <Image
                   alt="An image of Simco's logo"
                   src="/simcos-logo.png"
@@ -35,17 +35,17 @@ const HomePage = async () => {
                   style={{objectFit:"cover"}}
                 />
               </div>
-              <div className="flex flex-col items-center relative px-20 text-center basis-1/2">
+              <div className="flex flex-col items-center relative mx-20 text-center basis-1/2">
                 <h1 className={`text-white text-3xl m-8 mb-4 ${bevan.className}`}>
                   HUNGRY?
                 </h1>
-                <p className={`text-white text-xl ${robotoCondensed.className}`}>
+                <p className={`text-white text-xl mb-4 ${robotoCondensed.className}`}>
                   {`Welcome to Simco’s`}
                 </p>
-                <p className={`text-white text-xl ${robotoCondensed.className}`}>
-                  {`Welcome to Simco’s Home of the Worlds Largest Old Tyme Franks Serving iconic food & drink for lunch, dinner, and late-night cravings to the Boston area since 1935.`}
+                <p className={`text-white text-xl mb-4 ${robotoCondensed.className}`}>
+                  {`Welcome to Simco’s Home of the World's Largest Old Tyme Franks Serving iconic food & drink for lunch, dinner, and late-night cravings to the Boston area since 1935.`}
                 </p>
-                <div className="flex sm:flex-row">
+                <div className="flex mb-4 sm:flex-row">
                   {/* <Link href="/menu">
                     <SimcosButton
                       variant={"simcos"}
@@ -64,7 +64,7 @@ const HomePage = async () => {
                       PICKUP
                     </SimcosButton>
                   </Link>
-                  <Link href="/menu">
+                  <Link href="https://order.online/online-ordering/business/simcos-171605?delivery=true">
                     <SimcosButton
                       variant={"simcos"}
                       size={'nav'}
@@ -73,6 +73,17 @@ const HomePage = async () => {
                       DELIVERY
                     </SimcosButton>
                   </Link>
+                </div>
+                <div className="mb-4">
+                  <Link href="/menu">
+                      <SimcosButton
+                        variant={"simcos"}
+                        size={'nav'}
+                        className={bevan.className}
+                      >
+                        MENU
+                      </SimcosButton>
+                    </Link>
                 </div>
               </div>
             </div>

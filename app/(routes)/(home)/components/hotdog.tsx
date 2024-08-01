@@ -16,7 +16,7 @@ export const HotDog = () => {
       max-h-full
       max-w-full
       border-2
-      border-s-blue-500
+      border-s
     ">
       <Image
         src="/hot-dog-with-fries.jpg"

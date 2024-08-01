@@ -29,7 +29,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
         xl: "pt-6 pb-5 px-3 h-15",
-        nav:"px-6 py-1 ml-10",
+        nav:"px-4 py-1 ml-10",
         item: "h-11 w-11",
         tile: "h-29 w-29"
       },

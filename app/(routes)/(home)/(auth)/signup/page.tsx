@@ -55,7 +55,7 @@ export default function SignUpPage() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       // await signup(values);
-      console.error("test");
+      console.error("test",values);
     } catch (error) {
       console.error("Error during sign-up:", error);
     }
