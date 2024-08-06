@@ -24,10 +24,11 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Checkbox } from '@/components/ui/checkbox'
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
 const formSchema = z.object({
   instructions: z.string().optional(),
-  toppings: z.string().array().optional(),
+  toppings: z.record(z.string().optional()),
   size: z.string(),
   quantity: z.number().min(1)
 });
@@ -38,12 +39,6 @@ interface InfoProps {
 
 const Info: React.FC<InfoProps> = ({ data }) => {
   const cart = useCart();
-
-  const onAddToCart = () => {
-    console.log("Information being sent to cart",data)
-    cart.addItem(data);
-  }
-
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (newQuantity) => {
@@ -55,18 +50,19 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       instructions:"",
-      toppings: [],
+      toppings: {},
       size:"",
       quantity: 1
     },
   })
 
-  const addOns = []
-  const sizes = []
+  const addOns: JSX.Element[] = [];
+  const sizes: JSX.Element[] = [];
   const toppingsSet = new Set();
   
   const bannedAddOns = ["Well Done", 'Extra Cheese']
   const bannedToppings = ['Well Done','Small Pizza','Large Pizza']
+  
   //getting toppings first
   for (const item of data.modifiers) {
     const toppingsArray = item.modifierListData.modifiers;
@@ -78,35 +74,59 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     }
   }
   
-  const toppings = 
-  <div className="grid grid-cols-3 gap-4">
-  {Array.from(toppingsSet).map(topping => (
-    <div key={topping} className="flex items-center space-x-2">
-      <Checkbox
-        id={topping}
-        value={topping}
-        // isChecked={checkedToppings.has(topping)}
-        // onChange={() => handleCheckboxChange(topping)}
-      />
-      <label
-        htmlFor={topping}
-        className="text-sm font-medium leading-none cursor-pointer"
-      >
-        {topping}
-      </label>
-    </div>
-  ))}
-</div>
+//   const toppings = 
+//   <RadioGroup 
+//     className="grid grid-cols-3 gap-4"
+//     {...form.register(`toppings`)}
+//     >
+//   {Array.from(toppingsSet).map(topping => (
+//       <FormItem key={topping} className="flex items-center space-x-2">
+//         <FormControl>
+//           <RadioGroupItem value={topping} id={topping}/>
+//         </FormControl>
+//         <FormLabel htmlFor={topping} className="text-sm font-medium leading-none cursor-pointer">
+//           {topping}
+//         </FormLabel>
+//       </FormItem>
+//     // </div>
+//   ))}
+// </RadioGroup>
 
   //putting the toppings with approperiate heading
   for (const item of data.modifiers){
     const header = item.modifierListData.name
     if (!bannedAddOns.includes(header))
     addOns.push(
-      <div>
-        <h3 className="font-semibold text-black">{header}</h3>
-          {toppings}
-      </div>)
+      <FormField
+        key={header}
+        control={form.control}
+        name={`toppings.${header}`}
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="font-semibold text-black">{header}</FormLabel>
+            <FormControl>
+            <RadioGroup 
+                className="grid grid-cols-3 gap-4"
+                onValueChange={(value) => form.setValue(`toppings.${header}`, value)}
+                defaultValue={field.value}
+                >
+              {Array.from(toppingsSet).map(topping => (
+                  <FormItem key={topping} className="flex items-center space-x-2">
+                    <FormControl>
+                      <RadioGroupItem value={topping}/>
+                    </FormControl>
+                    <FormLabel className="text-sm font-medium leading-none cursor-pointer">
+                      {topping}
+                    </FormLabel>
+                  </FormItem>
+                // </div>
+              ))}
+            </RadioGroup>
+            </FormControl>
+          </FormItem>
+        )}
+      />
+    )
   }
 
   for (const item of data.itemData.variations){
@@ -130,6 +150,12 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     )
     // sizes.push(<p>{item.itemVariationData.name}:<Currency value={item.itemVariationData.priceMoney.amount}/></p>)
   }
+
+  const onAddToCart = (formData: z.infer<typeof formSchema>) => {
+    const cartData = { ...data, ...formData, quantity };
+    console.log("Information being sent to cart", formData);
+    cart.addItem(cartData);
+  };
 
   return ( 
     <div>
