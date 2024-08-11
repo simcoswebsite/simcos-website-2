@@ -6,65 +6,80 @@ import ProductCard from '@/components/ui/ProductCard';
 import ProductList from "@/components/ProductList";
 import NoResults from '@/components/ui/NoResults';
 import { Product } from "@/types";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
+
+
+import categories from './categories.json'
 
 import { useEffect, useState } from 'react'
 
 export default function MenuPage(){
   const [error, setError] = useState(null);
-  const [menus, setMenus] = useState([]);
+  // const [menus, setMenus] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchmenus = async () => {
-      try {
-        const response = await fetch('/api/menus');
-        console.log(response)
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-        const data = await response.json();
-        console.log(data)
-        setMenus(data);
-      } catch (error) {
-        console.log(error)
-      } 
-    };
+  const menu = Object.keys(categories).map((category) => {
+    return <h1>{category}</h1>
+  })
 
-    fetchmenus();
-  }, []);
 
-  console.log("here", menus)
+  // useEffect(() => {
+  //   const fetchmenus = async () => {
+  //     try {
+  //       const response = await fetch('/api/menus');
+  //       console.log(response)
+  //       if (!response.ok) {
+  //         throw new Error(`Error: ${response.statusText}`);
+  //       }
+  //       const data = await response.json();
+  //       console.log(data)
+  //       setMenus(data);
+  //     } catch (error) {
+  //       console.log(error)
+  //     } 
+  //   };
 
-  const menu = []
+  //   fetchmenus();
+  // }, []);
 
-  for (const key in menus){
-    const items = menus[key]
-    const list: Product[] = Object.values(items).map((item, index)=>{
-      // return <p key={index}>{item}</p>
-      const product: Product = {
-        id: item.id,
-        category: item.category,
-        name: item.name,
-        isDeleted: item.isDeleted,
-        itemData: item.itemData,
-        price:item.itemData.variations[0].itemVariationData.priceMoney.amount,
-        modifiers: item.itemData.modifiers.filter((modifier) => modifier.type == 'MODIFIER_LIST'),
-        sizeOptions: item.itemData.variations
-      }
-      // return <ProductCard key={index} data={item}/>
-      return product
-    })
-    // debugger
-    console.log("menu list", list)
-    menu.push(
-      // <div key={key}>
-      //   <h1>{key}</h1>
-      //   <ul>{list}</ul>
-      // </div>
-      <ProductList title={key} items={list}/>
+  // console.log("here", menus)
 
-    )
-  }
+  // const menu = []
+
+  // for (const key in menus){
+  //   const items = menus[key]
+  //   const list: Product[] = Object.values(items).map((item, index)=>{
+  //     // return <p key={index}>{item}</p>
+  //     const product: Product = {
+  //       id: item.id,
+  //       category: item.category,
+  //       name: item.name,
+  //       isDeleted: item.isDeleted,
+  //       itemData: item.itemData,
+  //       price:item.itemData.variations[0].itemVariationData.priceMoney.amount,
+  //       modifiers: item.itemData.modifiers.filter((modifier) => modifier.type == 'MODIFIER_LIST'),
+  //       sizeOptions: item.itemData.variations
+  //     }
+  //     // return <ProductCard key={index} data={item}/>
+  //     return product
+  //   })
+  //   // debugger
+  //   // console.log("menu list", list)
+  //   menu.push(
+  //     // <div key={key}>
+  //     //   <h1>{key}</h1>
+  //     //   <ul>{list}</ul>
+  //     // </div>
+  //     <ProductList title={key} items={list}/>
+
+  //   )
+  // }
   
   return(
     <div className='w-full h-full bg-white px-8 md:px-40 lg:px-40 flex flex-col'>
