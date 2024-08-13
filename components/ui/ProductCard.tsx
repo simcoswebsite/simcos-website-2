@@ -38,7 +38,8 @@ const ProductCard: React.FC<ProductCard> = ({
 
     previewModal.onOpen(data);
   };
-  
+  // debugger
+  // console.log("Test 3", data)
   return ( 
     <div onClick={onPreview} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
       {/* Image */}
@@ -52,7 +53,7 @@ const ProductCard: React.FC<ProductCard> = ({
       </div>
       {/* Description */}
       <div>
-        <p className="font-semibold text-lg">{data.name}</p>
+        <p className="font-semibold text-lg">{data?.name}</p>
         {/* <p className="text-sm text-gray-500">{data.category}</p> */}
         {/* Actions */}
         {/* <div className="opacity-0 group-hover:opacity-100 transition relative w-full px-6 bottom-5">

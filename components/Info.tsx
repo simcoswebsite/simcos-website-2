@@ -34,7 +34,7 @@ const formSchema = z.object({
 });
 
 interface InfoProps {
-  data: Product
+  data: Product | any
 };
 
 const Info: React.FC<InfoProps> = ({ data }) => {
@@ -55,101 +55,151 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       quantity: 1
     },
   })
+  console.log(data)
 
-  const addOns: JSX.Element[] = [];
-  const sizes: JSX.Element[] = [];
-  const toppingsSet = new Set();
-  
-  const bannedAddOns = ["Well Done", 'Extra Cheese']
-  const bannedToppings = ['Well Done','Small Pizza','Large Pizza']
-  
-  //getting toppings first
-  for (const item of data.modifiers) {
-    const toppingsArray = item.modifierListData.modifiers;
-    for (const object of toppingsArray) {
-      const topping = object.modifierData.name;
-      if (!bannedToppings.includes(topping)) {
-        toppingsSet.add(topping);
-      }
-    }
-  }
-  
-//   const toppings = 
-//   <RadioGroup 
-//     className="grid grid-cols-3 gap-4"
-//     {...form.register(`toppings`)}
-//     >
-//   {Array.from(toppingsSet).map(topping => (
-//       <FormItem key={topping} className="flex items-center space-x-2">
-//         <FormControl>
-//           <RadioGroupItem value={topping} id={topping}/>
-//         </FormControl>
-//         <FormLabel htmlFor={topping} className="text-sm font-medium leading-none cursor-pointer">
-//           {topping}
-//         </FormLabel>
-//       </FormItem>
-//     // </div>
-//   ))}
-// </RadioGroup>
+  //Steps
+  // iterate over the toppings if there are any and make them Radio Checkboxes
+  // Do the same for anything in an array in the JSON file
+  const sizes = data?.sizes
 
-  //putting the toppings with approperiate heading
-  for (const item of data.modifiers){
-    const header = item.modifierListData.name
-    if (!bannedAddOns.includes(header))
-    addOns.push(
-      <FormField
-        key={header}
-        control={form.control}
-        name={`toppings.${header}`}
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="font-semibold text-black">{header}</FormLabel>
-            <FormControl>
-            <RadioGroup 
-                className="grid grid-cols-3 gap-4"
-                onValueChange={(value) => form.setValue(`toppings.${header}`, value)}
-                defaultValue={field.value}
-                >
-              {Array.from(toppingsSet).map(topping => (
-                  <FormItem key={topping} className="flex items-center space-x-2">
-                    <FormControl>
-                      <RadioGroupItem value={topping}/>
-                    </FormControl>
-                    <FormLabel className="text-sm font-medium leading-none cursor-pointer">
-                      {topping}
-                    </FormLabel>
-                  </FormItem>
-                // </div>
-              ))}
-            </RadioGroup>
-            </FormControl>
-          </FormItem>
+  const Sizes: React.FC<{ sizes?: string[]}>= ({ sizes = [] }) => {
+    return (
+      <> 
+        {sizes.length > 0 ? (
+          sizes.map((size, index) => (
+            <FormItem key={index} className="items-center space-x-2 space-y-0">
+              <FormControl>
+                <RadioGroupItem value={size} id={`size-${index}`} />
+              </FormControl>
+              <FormLabel className="font-normal" htmlFor={`size-${index}`}>
+                {size}
+              </FormLabel>
+            </FormItem>
+          ))
+        ) : (
+          <p>No sizes available.</p>
         )}
-      />
+      </>
+    );
+  };
+  
+  const toppings = data?.toppings
+  
+  const Toppings: React.FC<{ toppings?: string[]}>= ({ toppings = [] }) => {
+    if (toppings.length === 0) return null
+    return (
+      <> 
+        {toppings.map((topping, index) => (
+            <FormItem key={index} className="flex items-center space-x-2">
+              <FormControl>
+                <RadioGroupItem value={topping} id={`topping-${index}`} />
+              </FormControl>
+              <FormLabel className="text-sm font-medium leading-none cursor-pointer" htmlFor={`topping-${index}`}>
+                {topping}
+              </FormLabel>
+            </FormItem>
+          ))}
+      </>
+    );
+  };
+
+  const toppingsNumber = data?.toppingsNumber
+
+  const toppingsGroupLabel = {
+    0: "",
+    1: "Second",
+    2: "Third",
+    3: "Fourth"
+  }
+
+  const ToppingsGroup: React.FC<{ toppingsNumber?: number}>= ({toppingsNumber = 1})=> {
+    return(
+      <>
+        {Array.from({ length: toppingsNumber }, (_, i) => (
+          <FormField
+          control={form.control}
+          name={`toppings-${i}`}
+          render={({ field }) => (
+            <FormItem>
+              {/* TODO: Change it so that the categories match up */}
+              <FormLabel className="font-semibold text-black">{`Choose a ${toppingsGroupLabel[i]} Topping`}</FormLabel>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="grid grid-cols-3 gap-4"
+                >
+                  <Toppings toppings={toppings}/>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        ))}
+      </>
     )
   }
 
-  for (const item of data.itemData.variations){
-    const name = item.itemVariationData.name
-    const price = <Currency value={item.itemVariationData.priceMoney.amount}/>
-    sizes.push(
-      <div key={name} className="flex space-x-2">
-        <Checkbox
-          id={name}
-          value={name}
-          // isChecked={checkedToppings.has(topping)}
-          // onChange={() => handleCheckboxChange(topping)}
-        />
-        <label
-          htmlFor={name}
-          className="text-sm font-medium leading-none cursor-pointer"
-        >
-          <span className='flex'>{name}: <Currency value={item.itemVariationData.priceMoney.amount}/></span>
-        </label>
-      </div>
-    )
-    // sizes.push(<p>{item.itemVariationData.name}:<Currency value={item.itemVariationData.priceMoney.amount}/></p>)
-  }
+  const flavors = data?.flavors
+
+  const Flavors: React.FC<{ flavors?: string[]}>= ({ flavors = [] }) => {
+    if (flavors.length === 0) return null
+    return (
+      <> 
+        {flavors.map((flavor, index) => (
+            <FormItem key={index} className="flex items-center space-x-3 space-y-0">
+              <FormControl>
+                <RadioGroupItem value={flavor} id={`flavor-${index}`} />
+              </FormControl>
+              <FormLabel className="font-normal" htmlFor={`flavor-${index}`}>
+                {flavor}
+              </FormLabel>
+            </FormItem>
+          ))}
+      </>
+    );
+  };
+
+  const substitutions = data?.substitutions
+  const Substitutions: React.FC<{ substitutions?: string[]}>= ({ substitutions = [] }) => {
+    if (substitutions.length === 0) return null
+
+    return (
+      <> 
+        {substitutions.map((substitution, index) => (
+            <FormItem key={index} className="flex items-center space-x-3 space-y-0">
+              <FormControl>
+                <RadioGroupItem value={substitution} id={`substitution-${index}`} />
+              </FormControl>
+              <FormLabel className="font-normal" htmlFor={`substitution-${index}`}>
+                {substitution}
+              </FormLabel>
+            </FormItem>
+          ))}
+      </>
+    );
+  };
+
+  const preparations = data?.preparation
+  const Preparations: React.FC<{ preparations?: string[]}>= ({ preparations = [] }) => {
+    if (preparations.length === 0) return null
+
+    return (
+      <> 
+        {preparations.map((preparation, index) => (
+            <FormItem key={index} className="flex items-center space-x-3 space-y-0">
+              <FormControl>
+                <RadioGroupItem value={preparation} id={`preparation-${index}`} />
+              </FormControl>
+              <FormLabel className="font-normal" htmlFor={`preparation-${index}`}>
+                {preparation}
+              </FormLabel>
+            </FormItem>
+          ))}
+      </>
+    );
+  };
 
   const onAddToCart = (formData: z.infer<typeof formSchema>) => {
     const cartData = { ...data, ...formData, quantity };
@@ -168,15 +218,86 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <hr className="my-4" />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onAddToCart)}>
-          <div className="flex flex-col gap-y-6">
-            <div className="flex flex-col items-center gap-x-4">
+          <div className="flex flex-col gap-y-6 border-green-500 border-2">
+            <div className="flex flex-col items-center gap-x-4 border-blue-500 border-2">
               <h3 className="font-semibold text-black">Size:</h3>
-              <div className='flex space-x-2'>
-                {sizes}
+              <div className='flex space-x-2 border-red-500 border-2 items-center justify-center'>
+              <FormField
+          control={form.control}
+          name="sizes"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="flex"
+                >
+                  <Sizes sizes={sizes}/>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
               </div>
+              <FormField
+          control={form.control}
+          name="flavors"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="flex flex-col space-y-1"
+                >
+                  <Flavors flavors={flavors}/>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="substitutions"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="flex flex-col space-y-1"
+                >
+                  <Substitutions substitutions={substitutions}/>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="preparations"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                  className="flex flex-col space-y-1"
+                >
+                  <Preparations preparations={preparations}/>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
               <h3 className="font-semibold text-black">Extras:</h3>
               <div>
-                {addOns}
+                <ToppingsGroup toppingsNumber={data.toppingsNumber}/>
               </div>
             </div>
           </div>

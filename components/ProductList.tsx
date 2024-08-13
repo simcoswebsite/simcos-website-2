@@ -5,7 +5,7 @@ import { robotoCondensed, roboto } from "@/fonts"
 
 interface ProductListProps {
   title: string;
-  items: Product[]
+  items: Product[] | any[]
 }
 
 const ProductList: React.FC<ProductListProps> = ({

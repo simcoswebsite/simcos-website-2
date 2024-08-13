@@ -414,7 +414,7 @@
         "price": "1295",
         "sizes": ["Small", "Large"],
         "sizesPrice": ["1295", "1695"],
-        "topping":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
         "toppingsNumber": 2 
     },
     {
@@ -422,7 +422,7 @@
         "name": "3 Way Combo Pizza",
         "price": "1495",
         "sizesPrice": ["1495", "1795"],
-        "topping":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
         "toppingsNumber": 3
     },
     {
@@ -431,7 +431,7 @@
         "price": "1595",
         "sizes": ["Small", "Large"],
         "sizesPrice": ["1595", "2195"],
-        "topping":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
         "toppingsNumber": 4
     },
     {
@@ -1127,21 +1127,21 @@
         "id": "QX5YL3NEGMVAZCEVDVF275FG",
         "name": "1 Topping Slice of Pizza",
         "price": "350",
-        "topping":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
         "toppingsNumber": 1
     },
     {
         "id": "47YSRENXQKKHRGNSSSSLQSXC",
         "name": "2 Topping Slice of Pizza",
         "price": "395",
-        "topping":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
         "toppingsNumber": 2
     },
     {
         "id": "R4C6UAB7U4WAO2MZHUN463YW",
         "name": "3 Topping Slice of Pizza",
         "price": "495",
-        "topping":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
         "toppingsNumber": 3
     },
     {
@@ -1167,7 +1167,7 @@
         "price": "795",
         "sizes": ["Small", "Large"],
         "sizesPrice": ["795", "995"],
-        "flavor": [
+        "flavors": [
           "Vanilla",
           "Chocolate",
           "Coffee",
