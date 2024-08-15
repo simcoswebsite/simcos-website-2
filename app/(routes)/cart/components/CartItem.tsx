@@ -8,7 +8,7 @@ import { Product } from "@/types";
 
 
 interface CartItemProps {
-  data: Product;
+  data: Product | any;
 }
 
 const CartItem: React.FC<CartItemProps> = ({
@@ -16,10 +16,18 @@ const CartItem: React.FC<CartItemProps> = ({
 }) => {
   const cart = useCart();
 
-  const onRemove = () => {
-    cart.removeItem(data.id);
+  const filterEmptyValues = (obj) => {
+    return Object.fromEntries(
+      Object.entries(obj).filter(([key, value]) => value !== '' && value != null)
+    );
   };
 
+  const cleanedData = filterEmptyValues(data)
+
+  const onRemove = () => {
+    cart.removeItem(data.uniqueId);
+  };
+console.log("CART INFO", data)
   return ( 
     <li className="flex py-6 border-b">
       {/* Image */}
@@ -31,23 +39,38 @@ const CartItem: React.FC<CartItemProps> = ({
           className="object-cover object-center"
         />
       </div>
-      <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
+      <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6 border-red-500 border-2 ">
         <div className="absolute z-10 right-0 top-0">
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
         <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
           <div className="flex justify-between">
             <p className=" text-lg font-semibold text-black">
-              {data.name}
+              {cleanedData.name}
             </p>
           </div>
 
           {/* INFO ABOUT ITEM */}
           <div className="mt-1 flex text-sm">
-            {/* <p className="text-gray-500">Blue</p>
-            <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">Large</p> */}
+            <p className="text-gray-500">Blue</p>
+            <p className="ml-4 border-l border-gray-200 pl-4 text-gray-500">{cleanedData?.size}</p>
           </div>
-          {/* <Currency value={data.price} /> */}
+          <Currency value={cleanedData.price} />
+        </div>
+        <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
+          {cleanedData.toppings && (
+              <div>
+                {Object.values(cleanedData.toppings).map((topping, index) => (
+                  <div key={index}>
+                    <p className="text-gray-500">{topping}</p> {/* Render each topping in a <p> tag */}
+                  </div>
+                ))}
+              </div>
+            )}
+          <p className="text-gray-500">{cleanedData?.flavor}</p>
+          <p className="text-gray-500">{cleanedData?.preparation}</p>
+          <p className="text-gray-500">{cleanedData?.substitution}</p>
+          <p className="text-gray-500">Special Instructions: {cleanedData?.instructions}</p>
         </div>
       </div>
     </li>
@@ -55,3 +78,8 @@ const CartItem: React.FC<CartItemProps> = ({
 }
  
 export default CartItem;
+
+/**
+ * 1) From the data passed in, create a new object with no empty values
+ * 2) The remaining values will simply be  listed in a list for display
+ */

@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -35,6 +36,7 @@ export default function MenuPage(){
   for (const category in categories){
     const title = category
     const items = categories[category]
+    console.log("ITEMS", items)
     goo.push(
       <ProductList title={title} items={items}/>
     )
@@ -51,10 +53,11 @@ export default function MenuPage(){
   for (const preCategory of preCategories){
     // console.log("TEST 2",preCategory)
     for (const item of preCategory){
-      const key = item.id
+      // const uniqueId = uuidv4()
+      // const itemWithId = { ...item, uniqueId: uniqueId }
       // console.log("Test item",item)
       items.push(
-        <ProductCard key={key} data={item}/>
+        <ProductCard key={item.id} data={item}/>
       )
     }
   }

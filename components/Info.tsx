@@ -25,13 +25,26 @@ import {
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { v4 as uuidv4 } from 'uuid'
 
-const formSchema = z.object({
-  instructions: z.string().optional(),
-  toppings: z.record(z.string().optional()),
-  size: z.string(),
-  quantity: z.number().min(1),
-});
+const createFormSchema = (toppingsNumber: number, requiresSize: boolean, requiresFlavor: boolean, requiresPreparation: boolean) => {
+  return z.object({
+    instructions: z.string().optional(),
+    toppings: z.record(z.string()).refine(
+      (toppings) => Object.keys(toppings).length === toppingsNumber,
+      {
+        message: `You must select ${toppingsNumber} topping(s).`,
+      }
+    ),
+    size: requiresSize ? z.string().min(1, "Size is required") : z.string().optional(),
+    flavor: requiresFlavor ? z.string().min(1, "Flavor is required") : z.string().optional(),
+    substitution: z.string().optional(),
+    preparation: requiresPreparation ? z.string().min(1, "Preparation is required") : z.string().optional(),
+    quantity: z.number().min(1),
+  });
+};
+
+type FormSchemaType = z.infer<ReturnType<typeof createFormSchema>>;
 
 interface InfoProps {
   data: Product | any;
@@ -46,12 +59,20 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     // You can also handle additional logic here, like updating the cart
   };
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const toppingsNumber = data?.toppingsNumber || 0;
+  const requiresSize = !!data?.sizes?.length;
+  const requiresFlavor = !!data?.flavors?.length;
+  const requiresPreparation = !!data?.preparation?.length;
+
+  const form = useForm<FormSchemaType>({
+    resolver: zodResolver(createFormSchema(toppingsNumber, requiresSize, requiresFlavor, requiresPreparation)),
     defaultValues: {
       instructions: "",
       toppings: {},
       size: "",
+      flavor: "",
+      substitution: "",
+      preparation: "",
       quantity: 1,
     },
   });
@@ -103,8 +124,6 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     );
   };
 
-  const toppingsNumber = data?.toppingsNumber;
-
   const toppingsGroupLabel = {
     0: "",
     1: "Second",
@@ -120,15 +139,20 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         {Array.from({ length: toppingsNumber }, (_, i) => (
           <FormField
             control={form.control}
-            name={`toppings-${i}`}
+            name={`toppings`}
+            key={i}
             render={({ field }) => (
               <FormItem>
                 {/* TODO: Change it so that the categories match up */}
-                <FormLabel className="font-semibold text-black">{`Choose a ${toppingsGroupLabel[i]} Topping`}</FormLabel>
+                <FormLabel className="font-semibold text-black">{`Choose a ${toppingsGroupLabel[i]} Topping -REQUIRED`}</FormLabel>
                 <FormControl>
                   <RadioGroup
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
+                    onValueChange={(value) => {
+                      // Ensure we are working with a defined object
+                      const updatedToppings = { ...field.value, [i]: value };
+                      field.onChange(updatedToppings);
+                    }}
+                    defaultValue={field.value[i]} // Avoid undefined access
                     className="grid grid-cols-3 gap-4"
                   >
                     <Toppings toppings={toppings} />
@@ -149,15 +173,16 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     if (flavors.length === 0) return null;
     return (
       <>
+        <FormLabel className="font-semibold text-black">{`Choose your flavor -REQUIRED`}</FormLabel>
         {flavors.map((flavor, index) => (
           <FormItem
             key={index}
             className="flex items-center space-x-3 space-y-0"
           >
             <FormControl>
-              <RadioGroupItem value={flavor} id={`flavor-${index}`} />
+              <RadioGroupItem value={flavor} id={`flavor`} />
             </FormControl>
-            <FormLabel className="text-sm font-medium leading-none cursor-pointer" htmlFor={`flavor-${index}`}>
+            <FormLabel className="text-sm font-medium leading-none cursor-pointer" htmlFor={`flavor`}>
               {flavor}
             </FormLabel>
           </FormItem>
@@ -174,6 +199,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
     return (
       <>
+        <FormLabel className="font-semibold text-black">{`Please select a bread substitution if you'd like one`}</FormLabel>
         {substitutions.map((substitution, index) => (
           <FormItem
             key={index}
@@ -182,12 +208,12 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             <FormControl>
               <RadioGroupItem
                 value={substitution}
-                id={`substitution-${index}`}
+                id={`substitution`}
               />
             </FormControl>
             <FormLabel
               className="font-normal"
-              htmlFor={`substitution-${index}`}
+              htmlFor={`substitution`}
             >
               {substitution}
             </FormLabel>
@@ -205,15 +231,16 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
     return (
       <>
+        <FormLabel className="font-semibold text-black">{`Choose your Preparation -REQUIRED`}</FormLabel>
         {preparations.map((preparation, index) => (
           <FormItem
             key={index}
             className="flex items-center space-x-3 space-y-0"
           >
             <FormControl>
-              <RadioGroupItem value={preparation} id={`preparation-${index}`} />
+              <RadioGroupItem value={preparation} id={`preparation`} />
             </FormControl>
-            <FormLabel className="font-normal" htmlFor={`preparation-${index}`}>
+            <FormLabel className="font-normal" htmlFor={`preparation`}>
               {preparation}
             </FormLabel>
           </FormItem>
@@ -223,8 +250,11 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   };
 
   const onAddToCart = (formData: z.infer<typeof formSchema>) => {
-    const cartData = { ...data, ...formData, quantity };
-    console.log("Information being sent to cart", formData);
+    const uniqueId = uuidv4()
+    const uniqueData = { ...formData, uniqueId: uniqueId }
+    const cartData = { ...data, ...uniqueData, quantity };
+    //CRUCIAL: this is where the unique keys are generated
+    console.log("Information being sent to cart", cartData);
     cart.addItem(cartData);
   };
 
@@ -244,7 +274,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               <div className="flex space-x-2 items-center justify-center">
                 <FormField
                   control={form.control}
-                  name="sizes"
+                  name="size"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
@@ -263,10 +293,9 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               </div>
               <FormField
                 control={form.control}
-                name="flavors"
+                name="flavor"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-semibold text-black">{`Choose your flavor`}</FormLabel>
                     <FormControl>
                       <RadioGroup
                         onValueChange={field.onChange}
@@ -282,7 +311,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               />
               <FormField
                 control={form.control}
-                name="substitutions"
+                name="substitution"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -300,7 +329,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
               />
               <FormField
                 control={form.control}
-                name="preparations"
+                name="preparation"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
