@@ -1,0 +1,1381 @@
+{
+  "Greek Sandwiches": [
+    {
+        "id": "VSBH5XYSXLSDVHLNAJMZ5NYN",
+        "name": "Gyro Sandwich",
+        "price": "995"
+    },
+    {
+        "id": "7NV5YTFHLYR7JBPVZTMHTKB6",
+        "name": "Chicken Gyro Sandwich",
+        "price": "995"
+    },
+    {
+        "id": "75TLBE4B2MAZS23TCCV5RAMX",
+        "name": "Souvlaki Sandwich",
+        "price": "1295"
+    },
+    {
+        "id": "7PHY6BXMFYGBIC5W6J6SVZMH",
+        "name": "Chicken Kabob Sandwich",
+        "price": "995"
+    },
+    {
+        "id": "TK2VCESBNKVFX7VJFWVTYO32",
+        "name": "Fried Chicken Sandwich",
+        "price": "995"
+    }
+],
+  "Dinners": [
+    {
+        "id": "7FSQNNNCAVCQQ4WAYUCJ2ZKS",
+        "name": "Steak Tips Dinner",
+        "price": "2495"
+    },
+    {
+        "id": "L4MU34JLAWJURXCD3P7QHWXB",
+        "name": "Combo Gyro and Souvlaki",
+        "price": "2595"
+    },
+    {
+        "id": "IQWBCFQOXDBGDB6TW27QHS7O",
+        "name": "Souvlaki Dinner",
+        "price": "2495"
+    },
+    {
+        "id": "PCPNPQD5TTDJYOICRPSGEL66",
+        "name": "BBQ Ribs",
+        "price": "2495"
+    }
+],
+  "Chicken Dinners": [
+    {
+        "id": "KNZ5EADQVR4OWPS4DU5XXESY",
+        "name": "Fried Chicken Wing Platter",
+        "price": "1795"
+    },
+    {
+        "id": "TYCXO6U6HPUJJMA3I7TNDV3U",
+        "name": "Fried Chicken Finger Platter",
+        "price": "1795"
+    },
+    {
+        "id": "MHL7E6Q6YKBPJGGYZ5CVRFCC",
+        "name": "Buffalo Wing Dinner",
+        "price": "1895"
+    },
+    {
+        "id": "KOOAFUYR2XN3MITVWI42HPU6",
+        "name": "Honey BBQ Wings",
+        "price": "1895"
+    },
+    {
+        "id": "E26TLMKJZO2NHLU3L2I3YZFJ",
+        "name": "Honey BBQ Fingers",
+        "price": "1895"
+    },
+    {
+        "id": "2JHPBANFM3ICMGIVSQMW6A64",
+        "name": "BBQ Half Chicken",
+        "price": "2195"
+    },
+    {
+        "id": "KAHH7WONKNFZAM5ARLG5X56H",
+        "name": "Buffalo Finger Dinner",
+        "price": "1895"
+    }
+],
+  "Soups": [
+    {
+        "id": "WEUPCLKXCBYYCQ7PCRSWJOXQ",
+        "name": "Clam Chowder",
+        "price": "600"
+    },
+    {
+        "id": "DMEHRD3FTUAYH5HYNMFQU5RI",
+        "name": "Chili Soup",
+        "price": "600"
+    },
+    {
+        "id": "NYKIVBNELCRYJLNDNZI6WAQC",
+        "name": "Chicken Gumbo",
+        "price": "600"
+    }
+],
+  "Wraps": [
+    {
+        "id": "ZYFFC2VXCN7QGQJJN53LEY23",
+        "name": "Grilled Chicken Wrap",
+        "price": "1695"
+    },
+    {
+        "id": "V7WWDIAJM3WPZMBPZGQESPOC",
+        "name": "Roast Beef Wrap",
+        "price": "1495"
+    },
+    {
+        "id": "TYYZ23ODB7VQPYF26K5ZJU2V",
+        "name": "Turkey Wrap",
+        "price": "1495"
+    },
+    {
+        "id": "LU32GVDLSNI2F6GVQK6TR6ZS",
+        "name": "Buffalo Chicken Wrap",
+        "price": "1695"
+    },
+    {
+        "id": "TGHRJTS7I3G22QTL7JQ5Y3ZK",
+        "name": "Crispy Chicken Wrap",
+        "price": "1695"
+    },
+    {
+        "id": "ZZIOMU4TURM6EZI7AEZID445",
+        "name": "Chicken Caesar Wrap",
+        "price": "1395"
+    },
+    {
+        "id": "CCTM7X7DQ4QHSBXAASQ4HF2D",
+        "name": "Steak Tips Wrap",
+        "price": "1795"
+    },
+    {
+        "id": "DXINSQQNK3BXFKBX2WOTD5FA",
+        "name": "Fish Wrap",
+        "price": "1795"
+    }
+],
+  "Spaghetti": [
+    {
+        "id": "R6ASSHAHDJDO7AHYFW64PO53",
+        "name": "Spaghetti with Sauce and Cheese",
+        "price": "1295"
+    },
+    {
+        "id": "NMSJFIXHCZH2ADLCN2OSQPEF",
+        "name": "Spaghetti with Meatball",
+        "price": "1495"
+    },
+    {
+        "id": "IBJJKUHSI43WS3YYWEGG26WL",
+        "name": "Spaghetti with Mushroom",
+        "price": "1295"
+    },
+    {
+        "id": "GJ6XLUCTGP75H6FYOADKIPWW",
+        "name": "Spaghetti with Sausage",
+        "price": "1495"
+    },
+    {
+        "id": "5DVGA3IXN6KR74NYN7ZOJ6IJ",
+        "name": "Spaghetti with Veal",
+        "price": "1795"
+    },
+    {
+        "id": "FTT32BGDSK3Q4H626OD3YGIU",
+        "name": "Spaghetti Combo Chicken and Shrimp Alfredo",
+        "price": "1995"
+    },
+    {
+        "id": "BHILIV67QD6SYD3XBA4N5EFN",
+        "name": "Ziti Chicken Broccoli Alfredo",
+        "price": "1995"
+    },
+    {
+        "id": "5ADCB4ESAV5T476ZBEO44MU6",
+        "name": "Ziti Combo Chicken, Shrimp, Broccoli Alfredo",
+        "price": "2495"
+    },
+    {
+        "id": "Z5JJCYZXEHA3BMYAUKFQRKI2",
+        "name": "Ziti Steak Tips Alfredo",
+        "price": "2295"
+    },
+    {
+        "id": "7RWNU52NI5LO7TY3TMKI4TTP",
+        "name": "Ziti Scallops Broccoli",
+        "price": "2995"
+    },
+    {
+        "id": "CWVCRHKP5DBWZRCOM37MWRBI",
+        "name": "Ziti Shrimp Broccoli Alfredo",
+        "price": "1595"
+    }
+],
+  "Featured": [
+    {
+        "id": "V627CSM57EZENWIBHI5VKXZI",
+        "name": "Hot Dog",
+        "price": "600",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "VVZTRO75GFVG4D2PWEFAFE7T",
+        "name": "Hot Sausage",
+        "price": "650",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "ESCGA67LHF42G6JQ642QG7H6",
+        "name": "Hot Sausage with Cheese",
+        "price": "700",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "ECBMSNUNC7YDRM2LQCJ2L6KT",
+        "name": "Turkey Burger",
+        "price": "895",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "VXW3UW2L6XQEKEQT6ILPGKGI",
+        "name": "Hot Dog with French Fries",
+        "price": "1195",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "VVXTWE2GNLLA2XMTJCKTTY6V",
+        "name": "Hot Dog with Onion Rings",
+        "price": "1195",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "MM4OVCJHQLJ5FFFVXL3L7YNS",
+        "name": "Cheeseburger with Onion Rings",
+        "price": "1395",
+        "toppings": ["mustard", "ketchup", "onion", "relish"],
+        "preparation": ["Rare", "Medium Rare", "Medium", "Medium Well", "Well Done"]
+    },
+    {
+        "id": "Y3SJCLFK2N7ZDEBV7NFJD3NF",
+        "name": "Hot Sausage with French Fries",
+        "price": "1295",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "LFWCNQIHZYA7QSEWZ4ZPLZ32",
+        "name": "Hot Sausage with Onion Rings",
+        "price": "1295",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "OAXAJ6P66SJQVRFNJ37B32F5",
+        "name": "Turkey Burger with French Fries",
+        "price": "850",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "TKCAUFXIR367AVDHXIZVTHMP",
+        "name": "Turkey Burger with Onion Rings",
+        "price": "950",
+        "toppings": ["mustard", "ketchup", "onion", "relish"]
+    },
+    {
+        "id": "JQA4PP7DAX4U5J2GBI2U26JM",
+        "name": "Cheese French Fries",
+        "price": "795"
+    },
+    {
+        "id": "NBUOEB4IE67UUKMHEFJJU6J4",
+        "name": "Chili Cheese French Fries",
+        "price": "995"
+    },
+    {
+        "id": "SN3YO7Q6OI4Z65IENIPTS3JM",
+        "name": "Cheese Hot Dog",
+        "price": "550"
+    },
+    {
+        "id": "YCG6GCLSE5RKO227FAHKXWYY",
+        "name": "Chili Hot Dog",
+        "price": "575"
+    },
+    {
+        "id": "PGLGNHWCLYGFWWZKMIVPSTCW",
+        "name": "Chili Cheese",
+        "price": "600"
+    },
+    {
+        "id": "MWA562DB5ZEOPOEH2FSS5LHJ",
+        "name": "Cheeseburger with French Fries",
+        "price": "1395",
+        "toppings": ["mustard", "ketchup", "onion", "relish"],
+        "preparation": ["Rare", "Medium Rare", "Medium", "Medium Well", "Well Done"]
+    }
+],
+  "Pizza": [
+    {
+        "id": "T4AJNLC6VVWVEOWCWASQ3IPW",
+        "name": "Plain Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "3MX7JREXMAEP6WCYZ4GBOA76",
+        "name": "Onion Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1495"] 
+    },
+    {
+        "id": "KTBTIRAW5DKAKRJOVQXF2RSP",
+        "name": "Pepper Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "7UQ6LJUBF7F24HU6EDU2M2GI",
+        "name": "Meatball Pizza",
+        "price": "1295",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1295", "1695"] 
+    },
+    {
+        "id": "3H5BVAPSY7Y5JCABVWATQYGM",
+        "name": "Salami Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "EJWIJSJA5G2FNLEJT7VXDCMH",
+        "name": "Pepperoni Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "VLHHIVY35ZYUXZODHPQ62SQG",
+        "name": "Sausage Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "DGQSLG5FFIQGNV6CMEQ52LND",
+        "name": "Anchovies Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "BE7QSJR74JESY7CWLG2OVCN6",
+        "name": "Onion and Pepper Pizza",
+        "price": "1295",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "EJKPCJZZDWOSQ4CHVKBHGNZ6",
+        "name": "Mushroom Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "UWS52PE57MPMU4JVMF6XQTT2",
+        "name": "Ham Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "5UA66DWDKEOEKOSX5EY3R23Q",
+        "name": "Bacon Pizza",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "5KHM2GGKCLXFNSNG3TW7XVKO",
+        "name": "Pastrami Pizza",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1595"] 
+    },
+    {
+        "id": "5GBGAQKR2NEAQAMAACGIMYPW",
+        "name": "Shrimp Pizza",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2495"] 
+    },
+    {
+        "id": "5AJJWEWCPB6GWURT3DF4T5WD",
+        "name": "Scallop Pizza",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2595"] 
+    },
+    {
+        "id": "QOZ3XWJ64AATKEB5QCZQFY4V",
+        "name": "2 Way Combo Pizza",
+        "price": "1295",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1295", "1695"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppingsNumber": 2 
+    },
+    {
+        "id": "JAITUKZ7PQMHUSOXX5AVCLWB",
+        "name": "3 Way Combo Pizza",
+        "price": "1495",
+        "sizesPrice": ["1495", "1795"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppingsNumber": 3
+    },
+    {
+        "id": "5MQKTOTKZT6WX6ONZHCOGGJC",
+        "name": "4 Way Combo Pizza",
+        "price": "1595",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1595", "2195"],
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppingsNumber": 4
+    },
+    {
+        "id": "R5S2N6ETPLPVMEJXMFI6FLL6",
+        "name": "Special Pizza",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2495"]
+    },
+    {
+        "id": "X556RGHJQMGCRMVXFVTEPSN5",
+        "name": "Extra Special Pizza",
+        "price": "1795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1795", "2595"]
+    },
+    {
+        "id": "A4KNYYUAE6EFBL4WS54FEN4Z",
+        "name": "Hawaiian Pizza",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1795"]
+    },
+    {
+        "id": "V7D5RQUSGW6OCJ2UCBXCCJ65",
+        "name": "Grilled Chicken Pizza",
+        "price": "1595",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1595", "2095"]
+    }
+],
+  "Calzones": [
+    {
+        "id": "7CBDUROJPJZGRHIF7ELBGYQE",
+        "name": "Spinach, Onion and Feta Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2395"]
+    },
+    {
+        "id": "4JUL24WHLZF3R7VGNWRRXWTP",
+        "name": "Chicken and Broccoli Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2595"]
+    },
+    {
+        "id": "SAYLVXC4BNQSNBPRA6OHDXAV",
+        "name": "Jambalaya Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1595", "2395"]
+    },
+    {
+        "id": "YO5OLM3QQVTCGAP5DAJ4PB3H",
+        "name": "Mexican Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2395"]
+    },
+    {
+        "id": "74URCESCEWZDBOHOZNGRMNI2",
+        "name": "Pepperoni and Cheese Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2395"]
+    },
+    {
+        "id": "3EFDVIUMO4WTNGHXUNIAHKLA",
+        "name": "Chicken Cutlet Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2595"]
+    },
+    {
+        "id": "OVLV7LHVRLREK2TRCNXQFXX2",
+        "name": "Veggie Special Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2395"]
+    },
+    {
+        "id": "FQSLOZEODB2L35F7J6LRR3P2",
+        "name": "Cheese Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2395"]
+    },
+    {
+        "id": "GFW7O2AUET5II6WPGFOEJR6Y",
+        "name": "Steak and Cheese Calzone",
+        "price": "1295",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1295", "1795"]
+    },
+    {
+        "id": "SVSHWNA4O3OGP7U2IGXZYIEM",
+        "name": "Steak Tip Calzone",
+        "price": "1795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1795", "2695"]
+    },
+    {
+        "id": "4AJZWIY3MHSNL2DKA4THR3FH",
+        "name": "Chicken Broccoli Alfredo Calzone",
+        "price": "1795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1795", "2695"]
+    },
+    {
+        "id": "C3XXEVLQBS3Z7WVTH5PYO5DA",
+        "name": "Combo Calzone",
+        "price": "1795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1795", "2695"]
+    },
+    {
+        "id": "DOWAACJHXVU66T22YCNLQBYS",
+        "name": "Buffalo Chicken Calzone",
+        "price": "1695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1695", "2595"]
+    }
+],
+  "Salads": [
+    {
+        "id": "5P7RD55U5LJRKHQ7INDEOYMQ",
+        "name": "Greek Salad",
+        "price": "1095"
+    },
+    {
+        "id": "M77SIXDHGR2YV3BM5VQTUYH3",
+        "name": "Tossed Salad",
+        "price": "995"
+    },
+    {
+        "id": "2BYFYF57XQZDV4CRNUJJOY4L",
+        "name": "Antipasto Salad",
+        "price": "1295"
+    },
+    {
+        "id": "SEITUGPQMM2KNGM6TZ3RG7UW",
+        "name": "Grilled Chicken Salad",
+        "price": "1495"
+    },
+    {
+        "id": "ZS3BJD22N4YCYXQTTNKJ22U6",
+        "name": "Tuna Salad",
+        "price": "1295"
+    },
+    {
+        "id": "FLN7NVIP3FTEXYCJZJRZLYDP",
+        "name": "Crabmeat Salad",
+        "price": "1295"
+    },
+    {
+        "id": "V32BXVWUBY5OELCVAO4Z32OT",
+        "name": "Roast Beef Salad",
+        "price": "1295"
+    },
+    {
+        "id": "DQJ7R4GLJX22AHRL2VYRJWJE",
+        "name": "Turkey Salad",
+        "price": "1295"
+    },
+    {
+        "id": "TBUJEFF7EBSHZSMW3MUSSMEA",
+        "name": "Ham and Cheese Salad",
+        "price": "1295"
+    },
+    {
+        "id": "7NC2VKOEIEE3B7ZDG3QUJT5A",
+        "name": "Chef's Salad",
+        "price": "1295"
+    },
+    {
+        "id": "NV65NSOJQWK562NXD5YCVQPZ",
+        "name": "Steak Tip Salad",
+        "price": "1995"
+    },
+    {
+        "id": "J55FLCJWUN5OMF3TGPXIJ6EV",
+        "name": "Shrimp Salad",
+        "price": "2195"
+    },
+    {
+        "id": "JAMV6IPUHCOUFKUEYRABJUD3",
+        "name": "Caesar Salad",
+        "price": "995"
+    },
+    {
+        "id": "MTQUAKHMMZIYD2T7AMUSPROO",
+        "name": "Grilled Chicken Caesar Salad",
+        "price": "1695"
+    },
+    {
+        "id": "KRVHDK4BUTFQBKETJS7Q5OQ7",
+        "name": "Coleslaw Salad",
+        "price": "495"
+    },
+    {
+        "id": "V6GKO6UMIUBIRJOJLXI5LFGE",
+        "name": "Potato Salad",
+        "price": "495"
+    },
+    {
+        "id": "IYY3HGREV3HGLUCYFLYB3TTL",
+        "name": "Crispy Chicken Salad",
+        "price": "1695"
+    }
+],
+  "Subs": [
+    {
+        "id": "3XN6WCODL6NUVDVYQNMXQD4G",
+        "name": "Meatless Sub",
+        "price": "995",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["995", "1195"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "YRTOQLR3NEXG3TJPX3DRTTZX",
+        "name": "Bologna Sub",
+        "price": "995",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1195"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "LK5ILLS53AKG5ZF7D7QZVA63",
+        "name": "Pastrami Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "FALAAN3LJ4GUOJHWD2RU3P5A",
+        "name": "Mortadella Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "IFUEFL326ABSAVMCKHFNBBZP",
+        "name": "American Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "D7U6WLDTBVAGBFWCKE2F3MLF",
+        "name": "Italian Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "V4AT6LZDEYFH5VF5KQN6YJK2",
+        "name": "Roast Beef Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "BAMU73BW73JTPCBCBK4HUJXU",
+        "name": "Ham and Cheese Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "XKHGST7P57DT5XQEHMOJPS62",
+        "name": "Turkey Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "CGDVPRMVAVISWE56ODPIUJJP",
+        "name": "B.L.T. Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "A2YUALVLBQFP2V2RPUS7E6RP",
+        "name": "Tuna Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1195"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "O34ZV62KDII5NX2IOFAHRF6Z",
+        "name": "Fish Sub",
+        "price": "1295",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1295", "1495"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "UGS7MNXGHRTMIRCM47AJVM6F",
+        "name": "Crabmeat Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "EJ75MRTOMZDTPW4BUMXPIHB5",
+        "name": "Pepper and Egg Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "5SQCFPJHXBU3NMNPHEYKRY6R",
+        "name": "Meatball Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "F2L4EPA263GTREUEDJGMRQC7",
+        "name": "Chicken Cutlet Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "QGRQSZ2PXI5OGVHHAXLFW4LZ",
+        "name": "Veal Cutlet Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "6NQONT6RYZV7LIVGVKNHADZK",
+        "name": "Sausage Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "TFGC4VK7ZURXX2YRRW67PFAJ",
+        "name": "Ham and Egg Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "UCHSUSI2IJQKCRBZBVOHPMVP",
+        "name": "Hamburger Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "PVS6ESHXDGT6333IXSQSSRT6",
+        "name": "Cheeseburger Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "2IEXOCI46FEK6AKYKHUVU5EL",
+        "name": "Grilled Chicken Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "5UTDEXMGWCNRTLGLDLUQU73Q",
+        "name": "Steak Tip Sub",
+        "price": "1495",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1495", "1795"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "ORBZUJ532NO2A5SDBCWTA7YD",
+        "name": "Chicken Salad Sub",
+        "price": "1095",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1095", "1295"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    },
+    {
+        "id": "JNCL5AMQ55MAAWMGPDCC7P56",
+        "name": "Chicken Parm Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"],
+        "substitutions":["Pita Bread", "Syrian Bread"]
+    }
+],
+  "Steak Subs": [
+    {
+        "id": "KG4DBXFA4MZUE7CU6VXKK6XN",
+        "name": "Steak and Cheese Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1295", "1495"]
+    },
+    {
+        "id": "52DPGWGRUQBF6EI4C2JQCB6V",
+        "name": "Steak and Onion Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1495"]
+    },
+    {
+        "id": "LEOCI6HGK44UIVTYUGT64Y6Z",
+        "name": "Steak and Pepper Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1495"]
+    },
+    {
+        "id": "XIHJRMDP2X767GCLVEQN57UW",
+        "name": "Steak and Mushroom Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1495"]
+    },
+    {
+        "id": "WHGY6QQ3Z5WFZP26PRD7ZBAN",
+        "name": "Steak and Egg Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1495"]
+    },
+    {
+        "id": "QRLT4KUU5OHGRUHVZYSZKPDS",
+        "name": "Steak and Sausage Sub",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1495"]
+    },
+    {
+        "id": "44OGTYZ3XRM4W4KXBC6565LW",
+        "name": "Steak Combo Sub",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1595"]
+    },
+    {
+        "id": "EDVO7YCK62RBBSBOKGSUOSQG",
+        "name": "Steak and Chicken Mix Sub",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1695"]
+    }
+],
+  "Fresh Seafood": [
+    {
+        "id": "RTWVCD5NTOM3F5BYGTX3WTXR",
+        "name": "Fish and Chips",
+        "price": "1995"
+    },
+    {
+        "id": "AJZLCV6TB5L6SICXL2GEELHL",
+        "name": "Fish and Onion Rings",
+        "price": "2195"
+    },
+    {
+        "id": "5SNI5HZKSB3LXNIHSFCXW2TD",
+        "name": "Haddock Plate",
+        "price": "2495"
+    },
+    {
+        "id": "BOBOIGQHEVWIU7KAKH6H3KRM",
+        "name": "Clam Plate",
+        "price": "3495"
+    },
+    {
+        "id": "G24V2XPESNAI7IQPTHIAD47M",
+        "name": "Clam Strip Plate",
+        "price": "2495"
+    },
+    {
+        "id": "DAANR4WEHPTK7ZSIGFJE6PWX",
+        "name": "Shrimp Plate",
+        "price": "2595"
+    },
+    {
+        "id": "Q7HZNBR2M3VHEODLZDGD7C3R",
+        "name": "Scallop Plate",
+        "price": "2995"
+    },
+    {
+        "id": "LJSAQCH22473BZKMG4FH7XP6",
+        "name": "Combination Plate",
+        "price": "2995"
+    },
+    {
+        "id": "ZC62JYRBX7H4VDICYNZENJAN",
+        "name": "Seafood Plate",
+        "price": "3495"
+    },
+    {
+        "id": "JAFZVL4CHU4ZNKC47KGAEJEF",
+        "name": "Simco's Super Seafood Plate",
+        "price": "3895"
+    },
+    {
+        "id": "SENVZPUEHMSL2SCPY74LMC4R",
+        "name": "Calamari Plate",
+        "price": "1995"
+    },
+    {
+        "id": "QII4XEZJJDBE7LAENUDCFU4K",
+        "name": "Whiting Plate",
+        "price": "1995"
+    },
+    {
+        "id": "USMNLPKQDCZRBMV4SMN726S2",
+        "name": "Clam Strip Roll",
+        "price": "1695"
+    },
+    {
+        "id": "ZBHWDNN3FRLFWPCFSMWO6EO3",
+        "name": "Clam Bellies Roll",
+        "price": "2995"
+    },
+    {
+        "id": "IA6I23MIOWYISUDCBRR6IFIK",
+        "name": "Shrimp Roll",
+        "price": "1695"
+    },
+    {
+        "id": "VN433SKDZGTGTQCFYQPWCZ64",
+        "name": "Scallop Roll",
+        "price": "1995"
+    },
+    {
+        "id": "LS7IGTDEHHVVYVZU5IDQQZHA",
+        "name": "Whiting Fish Sandwich",
+        "price": "1095"
+    },
+    {
+        "id": "KCUJYIJM2AACVTBDN5HYS6BM",
+        "name": "Salmon Dinner",
+        "price": "1995"
+    }
+],
+  "Boxes": [
+    {
+        "id": "BOMIOV7DG6IUDHU4Z7V4C37B",
+        "name": "Clams Box",
+        "price": "2995",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["2995", "3995"]
+    },
+    {
+        "id": "BLYBDLH64C63CI5ZMKTO7UNH",
+        "name": "Clam Strip Box",
+        "price": "1495",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1495", "2195"]
+    },
+    {
+        "id": "ACE4FDGBHDZS3FLDSJ5IEU6C",
+        "name": "Scallop Box",
+        "price": "2995",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["2995", "3995"]
+    },
+    {
+        "id": "UQ45WG76FPOFIE2C3ALUYP6M",
+        "name": "Shrimp Box",
+        "price": "1995",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1995", "3295"]
+    },
+    {
+        "id": "IKP4NDVHMHT45OR3UDWVJN2Y",
+        "name": "French Fries Box",
+        "price": "695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["695", "895"]
+    },
+    {
+        "id": "MRE2CPT4ZRB46ZJ2GBDLWBAN",
+        "name": "Onion Rings Box",
+        "price": "695",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["695", "895"]
+    },
+    {
+        "id": "L4YIYTN46SHUM4TGBOALIALI",
+        "name": "Chicken Fingers Box",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1795"]
+    },
+    {
+        "id": "BOGB5FKYYN3WLDTUSNUQRGC5",
+        "name": "Chicken Wings Box",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1795"]
+    },
+    {
+        "id": "6ABYG3UJAHD7MTQ2ZLF3SYZ4",
+        "name": "Buffalo Wings Box",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1795"]
+    },
+    {
+        "id": "6B3F6TKYE6E3ZY3OIS3BWE7R",
+        "name": "Honey BBQ Wings Box",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1795"]
+    },
+    {
+        "id": "WSOHH3SGQMDAKDYOR5DGCJ4B",
+        "name": "BBQ Wings Box",
+        "price": "1395",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1395", "1795"]
+    },
+    {
+        "id": "F7PEN6E54XK7H4IOYIQKKADL",
+        "name": "25 Wings Box",
+        "price": "3495",
+        "sauce": ["Buffalo","Honey BBQ", "BBQ", "Plain"]
+    },
+    {
+        "id": "KSXPHIDEFPGA7RW7IOINC4PO",
+        "name": "Mozzarella Sticks Box",
+        "price": "1195",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1195", "1395"]
+    },
+    {
+        "id": "DDUNKGGWUCQQAG5FW2G34IBQ",
+        "name": "Ribs Box",
+        "price": "1595",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1595", "1995"]
+    },
+    {
+        "id": "GUAI72DLO3X5XBIPUQDSA6H2",
+        "name": "Steak Tips Box",
+        "price": "1595",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1595", "1995"]
+    },
+    {
+        "id": "FALQAIAVKLDGMQGN6DETW6BQ",
+        "name": "Fish Box",
+        "price": "1795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1795", "2295"]
+    },
+    {
+        "id": "XWOYV6QN3QLTHXL7PHW3CQHF",
+        "name": "Whiting Box",
+        "price": "1795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1795", "2295"]
+    },
+    {
+        "id": "5BGWMWHXXDEJZJCHVM4M3XTS",
+        "name": "Calamari Box",
+        "price": "1595",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["1595", "1995"]
+    }
+],
+  "Slice of Pizza": [
+    {
+        "id": "QX5YL3NEGMVAZCEVDVF275FG",
+        "name": "1 Topping Slice of Pizza",
+        "price": "350",
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppingsNumber": 1
+    },
+    {
+        "id": "47YSRENXQKKHRGNSSSSLQSXC",
+        "name": "2 Topping Slice of Pizza",
+        "price": "395",
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppingsNumber": 2
+    },
+    {
+        "id": "R4C6UAB7U4WAO2MZHUN463YW",
+        "name": "3 Topping Slice of Pizza",
+        "price": "495",
+        "toppings":["Onion","Pepper","Meatball","Salami","Pepperoni","Sausage","Anchovies","Mushroom","Ham","Bacon","Pastrami","Pineapple", "Grilled Chicken"],
+        "toppingsNumber": 3
+    },
+    {
+        "id": "G6BYMBR7UH5VR4APWW5EJL7N",
+        "name": "Cheese Pizza Slice",
+        "price": "250"
+    }
+],
+  "Desserts": [
+    {
+        "id": "GB2VABZQVWH3GYEE7DPMQ4XV",
+        "name": "Banana Boat",
+        "price": "1295"
+    },
+    {
+        "id": "62FP7HOJO5GP477HTX7GIMOY",
+        "name": "Brownie Sundae",
+        "price": "1195"
+    },
+    {
+        "id": "YVTHC2EUPHRKYEKGLM4BKKPU",
+        "name": "Ice Cream",
+        "price": "795",
+        "sizes": ["Small", "Large"],
+        "sizesPrice": ["795", "995"],
+        "flavors": [
+          "Vanilla",
+          "Chocolate",
+          "Coffee",
+          "Oreo",
+          "Chox Chip Dough",
+          "Orange Sherbet",
+          "Chox Chip",
+          "Strawberry",
+          "Maple",
+          "Ram Raisin",
+          "Pistachio",
+          "Grapenut",
+          "Butter Pecan",
+          "Almond Joy",
+          "Frozen Pudding"
+        ]
+    },
+    {
+        "id": "I6T2UBLJPMCYSUB4W36MEHNK",
+        "name": "Sundaes",
+        "price": "1095"
+    },
+    {
+        "id": "WPVZY4XRWONEA6UE6HH3AEDG",
+        "name": "Frappes",
+        "price": "575"
+    },
+    {
+        "id": "QYS7PLCGFUD2GDBCFCPAI2Y2",
+        "name": "Ice Cream Float",
+        "price": "995"
+    },
+    {
+        "id": "ULYLW2WPYGIZW6PTZKEIZHLE",
+        "name": "Root Beer Float",
+        "price": "995"
+    },
+    {
+        "id": "OGOZBN3NH4FQXRUJGH3M4FJR",
+        "name": "Raspberry Lime Rickey",
+        "price": "795"
+    },
+    {
+        "id": "ZNFU4KPRWCS6ZZTIJJQLORYU",
+        "name": "Cheesecake",
+        "price": "695"
+    },
+    {
+        "id": "ZYOFSYSVVGZXOR5DAIDZZIYU",
+        "name": "Rice Pudding",
+        "price": "695"
+    },
+    {
+        "id": "ZYNV55CM7HQCVFVJ724ULMC3",
+        "name": "Fried Twinkie",
+        "price": "895"
+    },
+    {
+        "id": "HYTKZM6HNL2XEBKXDJYS6Y2E",
+        "name": "Fried Dough",
+        "price": "895"
+    },
+    {
+        "id": "2FNE75YIANPHFR225PWJ5EMC",
+        "name": "Red Velvet Cake",
+        "price": "695"
+    },
+    {
+        "id": "SWDDH4ZET4YDGIHN762DHB5Y",
+        "name": "Chocolate Cake",
+        "price": "695"
+    },
+    {
+        "id": "6BDBDJSKBAYKGOQHCGLM3EHD",
+        "name": "Carrot Cake",
+        "price": "695"
+    },
+    {
+        "id": "QU4LNLN74OLOOLYP4RRKF7G4",
+        "name": "Brownie",
+        "price": "175"
+    },
+    {
+        "id": "BTJ2JY7YV5ZLBM6VVAECYSXF",
+        "name": "Assortment of Cookies",
+        "price": "175"
+    },
+    {
+        "id": "YZ3PKUDL7RHJKFAV3NTTYZEC",
+        "name": "Coffee Cake",
+        "price": "550"
+    }
+],
+  "Beverages": [
+    {
+        "id": "GGHUXDXVCTRCSLKRZFLB3FFT",
+        "name": "Pepsi",
+        "price": "300"
+    },
+    {
+        "id": "5B3WRCSS2MOYOOPTWIJMKAUU",
+        "name": "Diet Pepsi",
+        "price": "300"
+    },
+    {
+        "id": "T6BDBZCQYSN5FDEQTTR7WRP6",
+        "name": "Ginger Ale",
+        "price": "300"
+    },
+    {
+        "id": "PAZNALOCJGAUQJPGZ42C6RLJ",
+        "name": "Sierra Mist",
+        "price": "300"
+    },
+    {
+        "id": "ZI7ZUQRXUT5TYHOA6HVSWKVZ",
+        "name": "Dole Lemonade",
+        "price": "300"
+    },
+    {
+        "id": "FLAVTZNWII3FGPCND2MU7IDP",
+        "name": "Orange Soda",
+        "price": "300"
+    },
+    {
+        "id": "SRPZV3S53L34EVPNNCZOKH62",
+        "name": "Grape Soda",
+        "price": "300"
+    },
+    {
+        "id": "LDEMTUC4QSY6ASG2LVMXVBOE",
+        "name": "Fruit Punch",
+        "price": "300"
+    },
+    {
+        "id": "VOXTAY7GADYTILG6LAMNZKRF",
+        "name": "Brick Iced Tea",
+        "price": "350"
+    },
+    {
+        "id": "OVIJHVSTBYBXZG6TMGDZ7UJB",
+        "name": "Root Beer",
+        "price": "300"
+    },
+    {
+        "id": "FDS6EZZZR3UCYXRIOCZ6V6SO",
+        "name": "Cherry Pepsi",
+        "price": "300"
+    },
+    {
+        "id": "3GWEMMQP65AAVVHVC773DPCC",
+        "name": "Pineapple Soda",
+        "price": "300"
+    },
+    {
+        "id": "3CFYNBTSMIZOMKIO4EE6NSOC",
+        "name": "Strawberry Watermelon Soda",
+        "price": "300"
+    },
+    {
+        "id": "BPOMIOZOVMRAQYYXWMVO4O4D",
+        "name": "Water",
+        "price": "200"
+    },
+    {
+        "id": "BEMONFE6YOBUY37PZUOPTGFY",
+        "name": "Nantucket Juice",
+        "price": "350"
+    },
+    {
+        "id": "RWNJ3CG4722Q2FQ2OWTVDQQW",
+        "name": "Snapple Juice",
+        "price": "350"
+    },
+    {
+        "id": "Y7XE4FTGXH6NMKY2RXD73CK3",
+        "name": "Dole Orange Juice",
+        "price": "350"
+    },
+    {
+        "id": "Z2UI75CBTR4BTXO3HAJPOOXA",
+        "name": "Country Lemonade",
+        "price": "300"
+    },
+    {
+        "id": "6LO3ZI2VF54OEOODYOHOEIKJ",
+        "name": "Country Fruit Punch",
+        "price": "350"
+    },
+    {
+        "id": "I3MKRTSOXDDANKTWWEF6U6AX",
+        "name": "Simple Raspberry Lemonade",
+        "price": "350"
+    },
+    {
+        "id": "WV6ZQ6KVZHVPWP3XK6NR6PJL",
+        "name": "Gatorade",
+        "price": "350"
+    },
+    {
+        "id": "EHQVRUM42VWZJNG4E7RB5TYF",
+        "name": "2 Liter Drink",
+        "price": "500"
+    },
+    {
+        "id": "UVVAG27SFLQQB2QZ2CZVMKSC",
+        "name": "Pure Leaf Iced Tea",
+        "price": "350"
+    }
+]
+}

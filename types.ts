@@ -2,13 +2,13 @@ import { ItemVariationLocationOverrides } from "square";
 
 export interface Product {
   id: string;
-  category: string;
+  category?: string;
   name: string;
-  isDeleted: boolean;
-  itemData: Object
+  isDeleted?: boolean;
+  itemData?: Object
   price: string;
-  modifiers: Array<Object>;
-  sizeOptions: Array<Object>
+  modifiers?: Array<Object>;
+  sizeOptions?: Array<Object>
 };
 
 export interface Image {

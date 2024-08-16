@@ -1,11 +1,15 @@
+"use Client"
+
 import Image from "next/image"
 import Link from "next/link";
+import SubNav from "./SubNav";
 
 const Header = () => {
   
   return ( 
     <nav className="
       flex 
+      flex-col
       items-center 
       relative 
       min-h-min 
@@ -30,6 +34,7 @@ const Header = () => {
         />
       </div>
       </Link>
+      <SubNav />
     </nav>
    );
 }

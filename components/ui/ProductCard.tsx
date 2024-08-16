@@ -38,39 +38,38 @@ const ProductCard: React.FC<ProductCard> = ({
 
     previewModal.onOpen(data);
   };
-  
+  // debugger
+  // console.log("Test 3", data)
   return ( 
-    <div onClick={onPreview} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
-      {/* Image */}
-      <div className="aspect-square rounded-xl bg-gray-100 relative">
-        <Image 
-          src="/sample-picture.jpg"
-          alt="" 
-          fill
-          className="aspect-square object-cover rounded-md"
-        />
-      </div>
-      {/* Description */}
-      <div>
-        <p className="font-semibold text-lg">{data.name}</p>
-        {/* <p className="text-sm text-gray-500">{data.category}</p> */}
-        {/* Actions */}
-        {/* <div className="opacity-0 group-hover:opacity-100 transition relative w-full px-6 bottom-5">
-          <div className="flex gap-x-6 justify-center">
-            <IconButton 
-              onClick={onPreview} 
-              icon={<Expand size={20} className="text-gray-600" />}
-            />
-            <IconButton
-              onClick={onAddToCart} 
-              icon={<ShoppingCart size={20} className="text-gray-600" />} 
+    <div onClick={onPreview} className="bg-white group cursor-pointer rounded-xl border p-3 space-x-4 relative min-w-fit">
+      <div className="grid grid-cols-3 gap-4 w-full">
+        {/* Image */}
+        {/* {data.image && (
+          <div className="min-w-24 min-h-24 h-24 aspect-square rounded-xl bg-gray-100 relative">
+            <Image
+              src={data.image}
+              alt={data.name}
+              fill
+              className="aspect-square object-cover rounded-md"
             />
           </div>
-        </div> */}
-      </div>
-      {/* Price & Review */}
-      <div className="flex items-center justify-between">
-        <Currency value={data?.price} />
+        )} */}
+        <div className="min-w-24 min-h-24 h-24 aspect-square rounded-xl bg-gray-100 relative">
+            {/* <Image
+              src={data.image}
+              alt={data.name}
+              fill
+              className="aspect-square object-cover rounded-md"
+            /> */}
+          </div>
+        {/* Description */}
+        <div className="flex items-center ml-2">
+          <p className="font-semibold text-lg">{data?.name}</p>
+        </div>
+        {/* Price & Review */}
+        <div className="flex items-center">
+          <Currency value={data?.price} />
+        </div>
       </div>
     </div>
   );

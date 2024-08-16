@@ -31,8 +31,8 @@ const formSchema = z.object({
   password:z.string().min(8, {
     message: 'Password must be at least 8 characters long'
   }),
-  phoneNumber: z.string().min(2, {
-    message: "Phone Number must be at least 2 characters.",
+  phoneNumber: z.string().min(10, {
+    message: "Phone Number must be at least 10 characters.",
   }),
   enableEmails: z.boolean().default(false).optional(),
   enableTexts: z.boolean().default(false).optional()

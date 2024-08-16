@@ -10,7 +10,7 @@ export async function GET() {
     const attributeValues = {}
     const loadedCategories = {}
     const returnedObjects = response.result.objects
-    console.log("categories return",returnedObjects)
+    // console.log("categories return",returnedObjects)
     
     //Separate Categories and Items
     returnedObjects?.forEach((object) => {
@@ -19,8 +19,8 @@ export async function GET() {
         loadedCategories[object.categoryData.name] = [];
       }
     });
-    console.log(loadedCategories)
-    console.log(attributeValues)
+    console.log("Categories", loadedCategories)
+    // console.log("Attributes Values", attributeValues)
 
     const responseTwo = await catalogApi.searchCatalogObjects({
       objectTypes: [
@@ -35,7 +35,7 @@ export async function GET() {
     });
 
     const rawItems = responseTwo.result.objects
-    console.log("returned items", rawItems)
+    // console.log("Returned Menu Items", rawItems)
 
     const fetchModifiersForItem = async (itemId) => {
       try {
@@ -89,7 +89,7 @@ export async function GET() {
       }
     }
 
-    console.log(loadedCategories)
+    // console.log("Loaded Categories",loadedCategories)
     
     return NextResponse.json(loadedCategories);
     // return NextResponse.json(items);
