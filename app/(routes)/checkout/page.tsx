@@ -52,7 +52,7 @@ export default function Checkout() {
   return (
     <Container>
       <h1 className="text-xl font-bold text-black">Review Order and Submit Payment</h1>
-      <Summary />
+      {/* <Summary /> */}
       {/* TODO: Add Payment summary here */}
       {/* TODO: Add Toast confirmation and email confirmation */}
       <Form {...form}>

@@ -370,10 +370,10 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             )}
           />
           <div className="mt-5 flex items-center gap-x-3">
-            <QuantitySelector
+            {/* <QuantitySelector
               initialQuantity={quantity}
               onChange={handleQuantityChange}
-            />
+            /> */}
             <Button type="submit" className="flex items-center gap-x-2">
               Add To Cart
               <ShoppingCart size={20} />

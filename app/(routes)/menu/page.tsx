@@ -12,9 +12,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { v4 as uuidv4 } from 'uuid';
-
-
 
 import categories from './categories.json'
 
@@ -123,7 +120,7 @@ export default function MenuPage(){
   return(
     <div className='w-full h-full bg-white px-8 md:px-40 lg:px-40 flex flex-col'>
       <h1 className={`text-[30px] py-2 ${robotoCondensed.className}`}>MENU</h1>
-      <SearchBar className={`${roboto.className}`} placeholder="〇 Search"/>
+      {/* <SearchBar className={`${roboto.className}`} placeholder="〇 Search"/> */}
       <h1 className={`text-[18px] py-2 ${robotoCondensed.className}`}>PROMOTIONS</h1>
       <div className="min-h-24 min-w-full bg-[#EF370D] rounded-xl flex">
         <div className="flex flex-col p-4">
@@ -136,9 +133,9 @@ export default function MenuPage(){
         </div>
       </div>
       <h1 className={`text-[18px] py-4 ${robotoCondensed.className}`}>POPULAR</h1>
-      <div>
+      <Accordion type="multiple" defaultValue={[...Object.keys(categories)]}>
         {goo}
-      </div>
+      </Accordion>
     </div>
   )
 }
