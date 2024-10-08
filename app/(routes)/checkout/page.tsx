@@ -1,6 +1,6 @@
 "use client";
 import { CreditCard, PaymentForm } from "react-square-web-payments-sdk";
-import { submitPayment } from "./actions/actions";
+import { submitOrder, submitPayment } from "./actions/actions";
 import Container from "@/components/ui/Container";
 import {
   Form,
@@ -16,6 +16,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import Summary from './components/Summary'
+import { useEffect } from "react";
+import useCart from "@/hooks/useCart";
 
 
 const FormSchema = z.object({
@@ -31,6 +33,9 @@ const FormSchema = z.object({
 })
 
 export default function Checkout() {
+  
+  const cartTotal = useCart((state) => state.cartTotal);
+  const items = useCart((state) => state.items);
   // Replace with your application ID and location ID
   // const appId = process.env.SQUARE_APPLICATION_ID;
   const appId = 'sandbox-sq0idb-eFWIML_iUHk3zklfjNUKFw';
@@ -44,6 +49,9 @@ export default function Checkout() {
       postalCode: ""
     },
   })
+  console.log("Cart Items", items)
+  console.log("Cart Total", cartTotal)
+
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log("Form data:", data);
@@ -104,7 +112,9 @@ export default function Checkout() {
             const formData = form.getValues();
             onSubmit(formData);
             const result = await submitPayment(token.token);
+            // const orderResult = await submitOrder()
             console.log("Payment result:", result);
+            // console.log("Order Result", orderResult);
           } else {
             console.log("Form validation failed");
           }
