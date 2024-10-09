@@ -57,6 +57,31 @@ export default function Checkout() {
     console.log("Form data:", data);
   }
 
+  const lineItems = items.map((item) => {
+    console.log("Before manipulation", item)
+    return {
+      name: item.name,
+      quantity: `${item.quantity}`,
+      itemType: 'ITEM',
+      ...(item.instructions && { note: item.instructions }),
+      ...(item.size && { variationName: item.size }),
+      modifiers: [
+        {
+          name: 'Modifier Location',
+          basePriceMoney: {
+            amount: 0,
+            currency: 'USD'
+          }
+        }
+      ],
+      basePriceMoney: {
+        amount: item.price,
+        currency: 'USD'
+      }
+    }
+  })
+  console.log("Line Items Array",lineItems)
+
   return (
     <Container>
       <h1 className="text-xl font-bold text-black">Review Order and Submit Payment</h1>
@@ -111,7 +136,7 @@ export default function Checkout() {
           if (isValid) {
             const formData = form.getValues();
             onSubmit(formData);
-            const result = await submitPayment(token.token);
+            const result = await submitPayment(token.token, cartTotal, lineItems);
             // const orderResult = await submitOrder()
             console.log("Payment result:", result);
             // console.log("Order Result", orderResult);

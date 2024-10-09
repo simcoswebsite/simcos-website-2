@@ -18,22 +18,39 @@ const { ordersApi } = new Client({
   environment: "sandbox",
 })
 
-export async function submitOrder(){
+//template
+// export async function submitOrder(){
+//   try {
+//     const { result } = await ordersApi.createOrder({
+//       order: {
+//         locationId: 'L26Y90P0YB65A',
+//         lineItems: [
+//           {
+//             name: 'Gyro Sandwich',
+//             quantity: '1',
+//             itemType: 'ITEM',
+//             basePriceMoney: {
+//               amount: 995,
+//               currency: 'USD'
+//             }
+//           }
+//         ]
+//       },
+//       idempotencyKey: randomUUID()
+//     });
+    
+//     return result.order.id
+//   } catch(error) {
+//     console.log(error);
+//   }
+// }
+
+export async function submitOrder(lineItems){
   try {
     const { result } = await ordersApi.createOrder({
       order: {
         locationId: 'L26Y90P0YB65A',
-        lineItems: [
-          {
-            name: 'Gyro Sandwich',
-            quantity: '1',
-            itemType: 'ITEM',
-            basePriceMoney: {
-              amount: 995,
-              currency: 'USD'
-            }
-          }
-        ]
+        lineItems: lineItems
       },
       idempotencyKey: randomUUID()
     });
@@ -44,17 +61,17 @@ export async function submitOrder(){
   }
 }
 
-export async function submitPayment(sourceId) {
+export async function submitPayment(sourceId, cartTotal, lineItems) {
   try {
     // const orderId = await createOrderForChickenSub(locationId);
-    const orderId = await submitOrder()
+    const orderId = await submitOrder(lineItems)
 
     const { result } = await paymentsApi.createPayment({
       idempotencyKey: randomUUID(),
       sourceId,
       amountMoney: {
         currency: "USD",
-        amount: 995,
+        amount: cartTotal
       },
       orderId
     });
